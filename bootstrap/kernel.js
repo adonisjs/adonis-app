@@ -10,7 +10,7 @@
 |
 */
 
-const fold = require('fold')
+const fold = require('adonis-fold')
 const app = require('./app')
 const path = require('path')
 const Ace = require('adonis-ace')

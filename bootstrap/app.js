@@ -25,8 +25,7 @@ const providers = [
   'adonis-http-dispatcher/providers/ServerProvider',
   'adonis-http-dispatcher/providers/HttpExceptionProvider',
   'adonis-ace/providers/AnsiProvider',
-  'adonis-ace/providers/ConsoleProvider',
-  'adonis-ace-commands/providers'
+  'adonis-ace/providers/ConsoleProvider'
 ]
 
 /*
@@ -82,10 +81,6 @@ const aliases = {
 */
 
 const commands = [
-  'Adonis/Commands/Autoload',
-  'Adonis/Commands/Server:Start',
-  'Adonis/Commands/Server:Stop',
-  'Adonis/Commands/Server:Reload'
 ]
 
 module.exports = { providers, deferredProviders, aliases, commands }

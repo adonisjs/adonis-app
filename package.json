@@ -9,10 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "adonis-http-dispatcher": "git://github.com/adonisjs/adonis-http-dispatcher.git",
-    "adonis-ace" : "git://github.com/adonisjs/ace.git",
-    "adonis-ace-commands": "git://github.com/adonisjs/adonis-ace-commands.git",
-    "fold" : "git://github.com/adonisjs/fold.git"
   },
   "autoload": {
     "App": "./app"
