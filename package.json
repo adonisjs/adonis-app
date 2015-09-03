@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "adonis-ace": "^1.0.1",
+    "adonis-fold": "^1.0.0",
+    "adonis-http-dispatcher": "^1.0.2"
   },
   "autoload": {
     "App": "./app"
