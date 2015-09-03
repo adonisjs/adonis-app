@@ -83,17 +83,6 @@ module.exports = function(){
 
     /*
     |--------------------------------------------------------------------------
-    |   Setting up views
-    |--------------------------------------------------------------------------
-    |
-    |   Here we register views directory to render views using nunjucks
-    |
-    */
-    const View = use("View")
-    View.configure(path.join(__dirname,'../resources/views'))
-
-    /*
-    |--------------------------------------------------------------------------
     |   Setting up static resource
     |--------------------------------------------------------------------------
     |
@@ -113,7 +102,8 @@ module.exports = function(){
     |
     */
     const Server = use("Server")
-    Server.start(3333)
+    const Env = use("Env")
+    Server.start(Env.get("APP_PORT"))
 
 
   }).catch(function(error){
