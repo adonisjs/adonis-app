@@ -26,3 +26,4 @@ node_modules
 npm-debug.log
 storage/*
 !storage/.gitkeep
+.env
