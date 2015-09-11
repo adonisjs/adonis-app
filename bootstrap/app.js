@@ -7,25 +7,31 @@
 |
 |   Here you register your application providers , they are loaded while
 |   booting your app and must be configured with correct path reference.
+|   Path for providers must be require(able) by nodejs require.
 |
 */
 
 const providers = [
-  'adonis-http-dispatcher/providers/AppProvider',
-  'adonis-http-dispatcher/providers/LoggerProvider',
-  'adonis-http-dispatcher/providers/HelpersProvider',
-  'adonis-http-dispatcher/providers/NamespaceProvider',
-  'adonis-http-dispatcher/providers/EnvProvider',
-  'adonis-http-dispatcher/providers/MiddlewaresProvider',
-  'adonis-http-dispatcher/providers/RouteProvider',
-  'adonis-http-dispatcher/providers/RequestProvider',
-  'adonis-http-dispatcher/providers/ResponseProvider',
-  'adonis-http-dispatcher/providers/ViewProvider',
-  'adonis-http-dispatcher/providers/StaticProvider',
-  'adonis-http-dispatcher/providers/ServerProvider',
-  'adonis-http-dispatcher/providers/HttpExceptionProvider',
+  'adonis-framework/providers/AppProvider',
+  'adonis-framework/providers/LoggerProvider',
+  'adonis-framework/providers/HelpersProvider',
+  'adonis-framework/providers/NamespaceProvider',
+  'adonis-framework/providers/EnvProvider',
+  'adonis-framework/providers/MiddlewareProvider',
+  'adonis-framework/providers/RouteProvider',
+  'adonis-framework/providers/RequestProvider',
+  'adonis-framework/providers/ResponseProvider',
+  'adonis-framework/providers/ViewProvider',
+  'adonis-framework/providers/StaticProvider',
+  'adonis-framework/providers/ServerProvider',
+  'adonis-framework/providers/HttpExceptionProvider',
+  'adonis-lucid/providers/CollectionProvider',
+  'adonis-lucid/providers/DatabaseProvider',
+  'adonis-lucid/providers/LucidProvider',
   'adonis-ace/providers/AnsiProvider',
-  'adonis-ace/providers/ConsoleProvider'
+  'adonis-ace/providers/ConsoleProvider',
+  'adonis-config-provider/providers/ConfigProvider',
+  'adonis-validation-provider/providers/ValidatorProvider'
 ]
 
 /*
@@ -58,7 +64,7 @@ const aliases = {
   'Server' : 'Adonis/Src/Server',
   'Static' : 'Adonis/Src/Static',
   'HttpException' : 'Adonis/Src/HttpException',
-  'Middleware' : 'Adonis/Src/Middlewares',
+  'Middleware' : 'Adonis/Src/Middleware',
   'Route' : 'Adonis/Src/Route',
   'App' : 'Adonis/Src/App',
   'View' : 'Adonis/Src/View',
@@ -66,8 +72,13 @@ const aliases = {
   'Logger': 'Adonis/Src/Logger',
   'Helpers' : 'Adonis/Src/Helpers',
   'Namespace': 'Adonis/Src/Namespace',
+  'Collection' : 'Adonis/Src/Collection',
+  'Database' : 'Adonis/Src/Database',
+  'Lucid': 'Adonis/Src/Lucid',
   'Ansi' : 'Adonis/Addons/Ansi',
-  'Console' : 'Adonis/Addons/Console'
+  'Console' : 'Adonis/Addons/Console',
+  'Config' : 'Adonis/Addons/Config',
+  'Validator' : 'Adonis/Addons/Validator'
 }
 
 /*
@@ -75,7 +86,7 @@ const aliases = {
 |   Commands
 |--------------------------------------------------------------------------
 |
-|   Here you define your console commands , commands registered here
+|   Here you define your console commands , commands defined here
 |   using a valid namespace will be registered with Ace.
 |
 */

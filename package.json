@@ -4,14 +4,17 @@
   "description": "Folder structure for adonis application",
   "main": "server.js",
   "scripts": {
-    "start": "iojs ace server:start"
+    "start": "iojs --harmony_proxies server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "adonis-ace": "^1.0.1",
-    "adonis-fold": "^1.0.0",
-    "adonis-http-dispatcher": "^1.0.2"
+    "adonis-fold": "^1.0.1",
+    "adonis-framework": "^1.0.2",
+    "adonis-lucid": "^1.0.0",
+    "adonis-config-provider": "^1.0.0",
+    "adonis-validation-provider": "^1.0.0"
   },
   "autoload": {
     "App": "./app"

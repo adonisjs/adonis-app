@@ -84,7 +84,7 @@ module.exports = function(){
     |   out command ran by the user.
     |
     */
-    Store.invoke(require('adonis-http-dispatcher/package.json'))
+    Store.invoke(require('adonis-framework/package.json'))
 
   }).catch(function(error){
     console.log(error.stack);

@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 |
 |  Here we bootsrap our http server by registering providers to IOC
-|  Container.
+|  container , and autoloading app directory
 |
 */
 
@@ -56,7 +56,7 @@ module.exports = function(){
     |
     */
     const Namespace = use("Namespace")
-    Namespace.autoload()
+    return Namespace.autoload()
 
   })
   .then(function(){
@@ -69,7 +69,7 @@ module.exports = function(){
     |   Here we register http middlewares
     |
     */
-    require("../app/Http/kernel")
+    use("App/Http/kernel")
 
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ module.exports = function(){
     |   Here we register routes to http dispatcher.
     |
     */
-    require("../app/Http/routes")
+    use("App/Http/routes")
 
     /*
     |--------------------------------------------------------------------------

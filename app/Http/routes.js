@@ -6,8 +6,8 @@
 |--------------------------------------------------------------------------
 |
 |   Here we register application routes and bind controller methods or
-|   Closure to them. Keep this file for defining routes only and do
-|   not pollute it writing application specific code.
+|   Closures to them. Keep this file for defining routes only and do
+|   not pollute it by writing application specific code.
 |
 */
 

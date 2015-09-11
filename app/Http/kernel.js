@@ -11,7 +11,7 @@
 |
 */
 
-const Middleware = use("Middleware")
+const Middleware = use('Middleware')
 
 /*
 |--------------------------------------------------------------------------
