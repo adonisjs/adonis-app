@@ -22,6 +22,7 @@ const Middleware = use('Middleware')
 |
 */
 const globalMiddlewares = [
+  'App/Http/Middleware/BodyParser'
 ]
 
 /*

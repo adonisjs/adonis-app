@@ -10,11 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "adonis-ace": "^1.0.1",
+    "adonis-config-provider": "^1.0.0",
     "adonis-fold": "^1.0.1",
     "adonis-framework": "^1.0.2",
     "adonis-lucid": "^1.0.0",
-    "adonis-config-provider": "^1.0.0",
-    "adonis-validation-provider": "^1.0.0"
+    "adonis-validation-provider": "^1.0.0",
+    "formidable": "^1.0.17",
+    "ouch": "^0.2.0-beta",
+    "raw-body": "^2.1.2"
   },
   "autoload": {
     "App": "./app"

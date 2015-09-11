@@ -81,6 +81,18 @@ module.exports = function(){
     */
     use("App/Http/routes")
 
+
+    /*
+    |--------------------------------------------------------------------------
+    |   Application Exceptions
+    |--------------------------------------------------------------------------
+    |
+    |   Here we make sure we are handling any exceptions thrown during
+    |   http request.
+    |
+    */
+    use("App/Exceptions/handler")
+
     /*
     |--------------------------------------------------------------------------
     |   Setting up static resource
@@ -104,7 +116,6 @@ module.exports = function(){
     const Server = use("Server")
     const Env = use("Env")
     Server.start(Env.get("APP_PORT"))
-
 
   }).catch(function(error){
     console.log(error.stack);
