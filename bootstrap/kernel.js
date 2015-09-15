@@ -19,10 +19,12 @@ const Store = Ace.Store
 const Registerar = fold.Registerar
 const Ioc = fold.Ioc
 
+const providersList = app.providers.concat(app.aceProviders)
+
 module.exports = function(){
 
   Registerar
-  .register(app.providers,app.deferredProviders)
+  .register(providersList,app.deferredProviders)
   .then(function () {
 
     /*
@@ -85,7 +87,6 @@ module.exports = function(){
     |
     */
     Store.invoke(require('adonis-framework/package.json'))
-
   }).catch(function(error){
     console.log(error.stack);
     process.exit(0)

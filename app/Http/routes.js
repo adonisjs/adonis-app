@@ -13,4 +13,4 @@
 
 const Route = use('Route')
 
-Route.match(['get','post'],'/', 'HomeController.index')
+Route.get('/', 'HomeController.index')

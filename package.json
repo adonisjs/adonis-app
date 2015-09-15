@@ -4,16 +4,17 @@
   "description": "Folder structure for adonis application",
   "main": "server.js",
   "scripts": {
-    "start": "iojs --harmony_proxies server.js"
+    "start": "node --harmony_proxies server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "adonis-ace": "^1.0.1",
+    "adonis-ace": "git://github.com/adonisjs/ace.git",
+    "adonis-commands": "git://github.com/adonisjs/adonis-commands.git",
     "adonis-config-provider": "^1.0.0",
-    "adonis-fold": "^1.0.1",
-    "adonis-framework": "^1.0.2",
-    "adonis-lucid": "^1.0.0",
+    "adonis-fold": "git://github.com/adonisjs/fold.git",
+    "adonis-framework": "git://github.com/adonisjs/adonis-framework.git",
+    "adonis-lucid": "^1.0.1",
     "adonis-validation-provider": "^1.0.0",
     "formidable": "^1.0.17",
     "ouch": "^0.2.0-beta",
@@ -21,5 +22,8 @@
   },
   "autoload": {
     "App": "./app"
+  },
+  "devDependencies": {
+    "sqlite3": "^3.1.0"
   }
 }

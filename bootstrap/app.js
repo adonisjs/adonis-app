@@ -25,12 +25,12 @@ const providers = [
   'adonis-framework/providers/StaticProvider',
   'adonis-framework/providers/ServerProvider',
   'adonis-framework/providers/HttpExceptionProvider',
-  'adonis-lucid/providers/CollectionProvider',
-  'adonis-lucid/providers/DatabaseProvider',
-  'adonis-lucid/providers/LucidProvider',
   'adonis-ace/providers/AnsiProvider',
   'adonis-ace/providers/ConsoleProvider',
   'adonis-config-provider/providers/ConfigProvider',
+  'adonis-lucid/providers/CollectionProvider',
+  'adonis-lucid/providers/DatabaseProvider',
+  'adonis-lucid/providers/LucidProvider',
   'adonis-validation-provider/providers/ValidatorProvider'
 ]
 
@@ -48,6 +48,27 @@ const providers = [
 
 const deferredProviders = {
 }
+
+
+
+/*
+|--------------------------------------------------------------------------
+|   Ace Providers
+|--------------------------------------------------------------------------
+|
+|   Here you register ace providers , which are only specific for
+|   terminal commands. It really does not make any sense to
+|   load ACE specific providers for complete app.
+|
+*/
+
+const aceProviders = [
+  'adonis-commands/providers/ServerProvider',
+  'adonis-commands/providers/GeneratorProvider',
+  'adonis-commands/providers/MigrationsProvider',
+]
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +113,16 @@ const aliases = {
 */
 
 const commands = [
+  'Adonis/Addons/Server:Start',
+  'Adonis/Addons/Server:Stop',
+  'Adonis/Addons/Server:Show',
+  'Adonis/Addons/Server:Reload',
+  'Adonis/Addons/Generator:Controller',
+  'Adonis/Addons/Generator:Model',
+  'Adonis/Addons/Generator:Command',
+  'Adonis/Addons/Migration:Make',
+  'Adonis/Addons/Migration:Run',
+  'Adonis/Addons/Migration:Rollback'
 ]
 
-module.exports = { providers, deferredProviders, aliases, commands }
+module.exports = { providers, deferredProviders, aceProviders, aliases, commands }
