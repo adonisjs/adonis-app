@@ -52,14 +52,11 @@ module.exports = function(){
     |   App namespace
     |--------------------------------------------------------------------------
     |
-    |   Here we autoload our app directory
+    |   Here we bind app directory as autoload path with Ioc container
     |
     */
     const Namespace = use("Namespace")
-    return Namespace.autoload()
-
-  })
-  .then(function(){
+    Namespace.autoload()
 
     /*
     |--------------------------------------------------------------------------

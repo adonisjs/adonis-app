@@ -1,46 +1,45 @@
+
 /**
  * @author Harminder Virk
  * Css styles for adonis splash page , you are free to delete it
  * and get started with fresh installation.
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,600);
-html,body{
-  height: 100%;
-}
-body{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  background: #FD5252;
-  -webkit-font-smoothing: antialiased;
+
+ body{
+ 	font-family: 'Source Sans Pro', sans-serif;
+   -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-}
-*{
-  margin: 0;
-  padding: 0;
-}
-*:focus{
-  outline: none
-}
-.__wrapper{
-  width: 740px;
-  height: 100%;
-  margin: auto;
-  display: table;
-}
-.__tile{
-  display: table-cell;
-  height: 100%;
-  text-align: center;
-  vertical-align: middle;
-}
-.__tile h2{
-  font-weight: 300;
-  color: #fff;
-  font-size: 70px;
-  display: inline-block;
-}
-.__tile h3{
-  font-weight: 300;
-  color: #fff;
-  font-size: 30px;
-}
+   font-weight: lighter;
+   background: #ffffff;
+ }
+
+ *{
+ 	padding: 0;
+ 	margin: 0;
+ }
+
+ h1{
+ 	font-family: 'Source Sans Pro', sans-serif;
+   font-weight: lighter;
+   margin-bottom: 10px;
+   font-size: 92px;
+   color: #666666;
+ }
+
+ section{
+ 	display: table;
+ 	height: 100vh;
+ 	width: 100%;
+ }
+
+ .__wrapper{
+ 	vertical-align: middle;
+ 	display: table-cell;
+ 	text-align: center;
+ }
+
+ .__wrapper p{
+ 	letter-spacing: 2.5px;
+ 	font-size: 27px;
+ 	color: #555555;
+ }
