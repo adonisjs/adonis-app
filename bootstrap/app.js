@@ -120,6 +120,7 @@ const commands = [
   'Adonis/Addons/Generator:Controller',
   'Adonis/Addons/Generator:Model',
   'Adonis/Addons/Generator:Command',
+  'Adonis/Addons/Generator:Middleware',
   'Adonis/Addons/Migration:Make',
   'Adonis/Addons/Migration:Run',
   'Adonis/Addons/Migration:Rollback'
