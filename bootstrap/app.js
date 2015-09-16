@@ -117,6 +117,7 @@ const commands = [
   'Adonis/Addons/Server:Stop',
   'Adonis/Addons/Server:Show',
   'Adonis/Addons/Server:Reload',
+  'Adonis/Addons/Server:Logs',
   'Adonis/Addons/Generator:Controller',
   'Adonis/Addons/Generator:Model',
   'Adonis/Addons/Generator:Command',
