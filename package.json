@@ -11,7 +11,7 @@
   "dependencies": {
     "adonis-ace": "^1.0.3",
     "adonis-commands": "^1.0.4",
-    "adonis-config-provider": "^1.0.1",
+    "adonis-config-provider": "^1.0.2",
     "adonis-fold": "^1.0.3",
     "adonis-framework": "^1.0.6",
     "adonis-lucid": "^1.0.2",
