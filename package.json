@@ -13,7 +13,7 @@
     "adonis-commands": "^1.0.4",
     "adonis-config-provider": "^1.0.2",
     "adonis-fold": "^1.0.3",
-    "adonis-framework": "^1.0.6",
+    "adonis-framework": "^1.0.7",
     "adonis-lucid": "^1.0.2",
     "adonis-validation-provider": "^1.0.1",
     "formidable": "^1.0.17",
