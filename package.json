@@ -11,10 +11,10 @@
   "dependencies": {
     "adonis-ace": "^1.0.3",
     "adonis-commands": "^1.0.4",
-    "adonis-config-provider": "^1.0.2",
-    "adonis-fold": "^1.0.3",
+    "adonis-config-provider": "^1.0.3",
+    "adonis-fold": "^1.0.4",
     "adonis-framework": "^1.0.9",
-    "adonis-lucid": "^1.0.2",
+    "adonis-lucid": "^1.0.3",
     "adonis-validation-provider": "^1.0.1",
     "formidable": "^1.0.17",
     "ouch": "^0.2.0-beta",

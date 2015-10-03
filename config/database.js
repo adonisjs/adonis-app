@@ -39,7 +39,7 @@ module.exports = {
   |   isolated for each environment.
   |
   |--------------------------------------------------------------------------
-  |   npm install --save-dev mysql
+  |   npm install --save mysql
   |--------------------------------------------------------------------------
   |
   */
@@ -58,7 +58,7 @@ module.exports = {
   |   Feel Free
   |--------------------------------------------------------------------------
   |
-  |  Feel free to define as name connections you want to define.
+  |  Feel free to define as many connections you like to define.
   |
   */
 
