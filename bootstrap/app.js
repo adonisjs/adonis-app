@@ -18,6 +18,7 @@ const providers = [
   'adonis-framework/providers/NamespaceProvider',
   'adonis-framework/providers/EnvProvider',
   'adonis-framework/providers/MiddlewareProvider',
+  'adonis-framework/providers/SessionProvider',
   'adonis-framework/providers/RouteProvider',
   'adonis-framework/providers/RequestProvider',
   'adonis-framework/providers/ResponseProvider',
