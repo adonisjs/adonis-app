@@ -98,7 +98,6 @@ class BodyParser{
        */
       request.uploadedFiles = formFields.files || null
 
-
       /**
        * Setting up request raw body if available
        * @type {String}
