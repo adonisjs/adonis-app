@@ -112,7 +112,7 @@ module.exports = function(){
     */
     const Server = use("Server")
     const Env = use("Env")
-    Server.start(Env.get("APP_PORT"))
+    Server.start(Env.get("APP_HOST"), Env.get("APP_PORT"))
 
   }).catch(function(error){
     console.log(error.stack);
