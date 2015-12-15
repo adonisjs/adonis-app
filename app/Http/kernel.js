@@ -20,9 +20,9 @@ const Middleware = use('Middleware')
 |   Global middlewares will be executed on every http request.
 |
 */
-const globalMiddlewares = [
+Middleware.global([
   'App/Http/Middleware/BodyParser'
-]
+])
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +33,6 @@ const globalMiddlewares = [
 |   routes using unique keys
 |
 */
-const namedMiddlewares = {
+Middleware.named({
 
-}
-
-Middleware.global(globalMiddlewares)
-Middleware.named(namedMiddlewares)
+})
