@@ -40,7 +40,8 @@ const providers = [
 */
 const aceProviders = [
   'adonis-lucid/providers/SchemaProvider',
-  'adonis-lucid/providers/RunnerProvider'
+  'adonis-lucid/providers/RunnerProvider',
+  'adonis-commands/providers/GeneratorProvider'
 ]
 
 /*
@@ -83,7 +84,11 @@ const commands = {
   'greet:user': 'App/Commands/Greet',
   'migration:make': 'Adonis/Commands/Make',
   'migration:run': 'Adonis/Commands/Run',
-  'migration:rollback': 'Adonis/Commands/Rollback'
+  'migration:rollback': 'Adonis/Commands/Rollback',
+  'make:controller': 'Adonis/Commands/Generate:Controller',
+  'make:model': 'Adonis/Commands/Generate:Model',
+  'make:command': 'Adonis/Commands/Generate:Command',
+  'make:middleware': 'Adonis/Commands/Generate:Middleware',
 }
 
 module.exports = {providers, aliases, commands, aceProviders}

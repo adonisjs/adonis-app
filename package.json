@@ -9,7 +9,8 @@
   "author": "amanvirk",
   "license": "MIT",
   "dependencies": {
-    "adonis-ace": "^2.0.1",
+    "adonis-ace": "^2.0.2",
+    "adonis-commands": "^2.0.0",
     "adonis-fold": "^2.0.0",
     "adonis-framework": "^2.0.1",
     "adonis-lucid": "^2.0.0",
