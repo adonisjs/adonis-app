@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node --harmony_proxies server.js"
   },
-  "author": "amanvirk",
+  "author": "adonisjs",
   "license": "MIT",
   "dependencies": {
     "adonis-ace": "^2.0.2",
