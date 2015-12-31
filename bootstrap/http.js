@@ -45,7 +45,7 @@ module.exports = function () {
       const packageFile = path.join(__dirname, '../package.json')
       const Helpers = use('Helpers')
       Helpers.load(packageFile, Ioc)
-      const appNameSapce = Helpers.appNameSapce()
+      const appNameSpace = Helpers.appNameSpace()
 
       /*
       |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ module.exports = function () {
       | Here we load all middleware required by http requests.
       |
       */
-      use(`${appNameSapce}/Http/kernel`)
+      use(`${appNameSpace}/Http/kernel`)
 
       /*
       |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ module.exports = function () {
       | Here we load all registered routes required by http requests.
       |
       */
-      use(`${appNameSapce}/Http/routes`)
+      use(`${appNameSpace}/Http/routes`)
 
       /*
       |--------------------------------------------------------------------------
