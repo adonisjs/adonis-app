@@ -12,7 +12,7 @@
     "adonis-ace": "^2.0.3",
     "adonis-commands": "^2.0.1",
     "adonis-fold": "^2.0.0",
-    "adonis-framework": "^2.0.3",
+    "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
     "adonis-lucid": "^2.0.1",
     "formidable": "^1.0.17",
     "ouch": "^0.2.0-beta",
