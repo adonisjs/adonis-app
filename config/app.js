@@ -26,7 +26,7 @@ module.exports = {
     | values. Under the hood adonis makes of node-crypto.
     |
     */
-    algorithm : 'aes-256-cbc'
+    algorithm: 'aes-256-cbc'
   },
 
   http: {
