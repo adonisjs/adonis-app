@@ -25,7 +25,7 @@ const providers = [
   'adonis-framework/providers/SessionProvider',
   'adonis-lucid/providers/DatabaseProvider',
   'adonis-lucid/providers/LucidProvider',
-  'adonis-ace/providers/ConsoleProvider'
+  'adonis-ace/providers/AnsiProvider'
 ]
 
 /*
@@ -68,7 +68,7 @@ const aliases = {
   Lucid: 'Adonis/Src/Lucid',
   Runner: 'Adonis/Src/Runner',
   Schema: 'Adonis/Src/Schema',
-  Console: 'Adonis/Src/Console'
+  Ansi: 'Adonis/Src/Ansi'
 }
 
 /*
@@ -88,7 +88,7 @@ const commands = {
   'make:controller': 'Adonis/Commands/Generate:Controller',
   'make:model': 'Adonis/Commands/Generate:Model',
   'make:command': 'Adonis/Commands/Generate:Command',
-  'make:middleware': 'Adonis/Commands/Generate:Middleware',
+  'make:middleware': 'Adonis/Commands/Generate:Middleware'
 }
 
 module.exports = {providers, aliases, commands, aceProviders}

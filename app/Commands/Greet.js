@@ -1,6 +1,6 @@
 'use strict'
 
-const Console = use('Console')
+const Ansi = use('Ansi')
 
 class Greet {
 
@@ -37,7 +37,7 @@ class Greet {
    * @public
    */
   * handle (options, flags) {
-    Console.success(`Hello ${options.name}`)
+    Ansi.success(`Hello ${options.name}`)
   }
 
 }
