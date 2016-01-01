@@ -17,6 +17,17 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
+  | Migrations Table
+  |--------------------------------------------------------------------------
+  |
+  | By default adonis database migrations table is set to adonis_schema.
+  | Here is your chance to override it.
+  |
+  */
+   migrationsTable: 'adonis_schema',
+
+  /*
+  |--------------------------------------------------------------------------
   |   Sqlite Connection
   |--------------------------------------------------------------------------
   |
