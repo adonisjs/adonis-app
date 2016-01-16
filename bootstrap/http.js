@@ -15,6 +15,7 @@ const app = require('./app')
 const path = require('path')
 const Registrar = fold.Registrar
 const Ioc = fold.Ioc
+require('./extend')
 
 module.exports = function () {
   Registrar
