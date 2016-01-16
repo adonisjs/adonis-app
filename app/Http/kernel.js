@@ -12,9 +12,10 @@ const Middleware = use('Middleware')
 |
 */
 const globalMiddleware = [
-  'App/Http/Middleware/Cors',
-  'App/Http/Middleware/BodyParser',
-  'App/Http/Middleware/Flash'
+  'Adonis/Middleware/Cors',
+  'Adonis/Middleware/BodyParser',
+  'Adonis/Middleware/Flash',
+  'Adonis/Middleware/Shield'
 ]
 
 /*

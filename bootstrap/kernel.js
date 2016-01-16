@@ -17,6 +17,7 @@ const path = require('path')
 const Registrar = fold.Registrar
 const Ioc = fold.Ioc
 const allProviders = app.providers.concat(app.aceProviders)
+require('./extend')
 
 module.exports = function () {
   Registrar
