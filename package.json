@@ -14,6 +14,7 @@
     "adonis-fold": "^2.0.1",
     "adonis-framework": "^2.0.5",
     "adonis-lucid": "^2.0.3",
+    "adonis-middleware": "^1.0.1",
     "ouch": "^0.2.0-beta"
   },
   "autoload": {
