@@ -9,14 +9,13 @@
   "author": "adonisjs",
   "license": "MIT",
   "dependencies": {
-    "adonis-ace": "^2.0.5",
-    "adonis-commands": "^2.0.1",
-    "adonis-fold": "^2.0.0",
+    "adonis-ace": "^2.0.6",
+    "adonis-commands": "^2.0.2",
+    "adonis-fold": "^2.0.1",
     "adonis-framework": "^2.0.5",
-    "adonis-lucid": "^2.0.2",
-    "formidable": "^1.0.17",
-    "ouch": "^0.2.0-beta",
-    "raw-body": "^2.1.5"
+    "adonis-lucid": "^2.0.3",
+    "adonis-middleware": "^1.0.1",
+    "ouch": "^0.2.0-beta"
   },
   "autoload": {
     "App": "./app"
