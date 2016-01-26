@@ -71,6 +71,31 @@ module.exports = {
       password: Env.get('MYSQL_PASSWORD', ''),
       database: Env.get('MYSQL_DATABASE', 'adonis')
     }
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  |   PostgreSQL Connection
+  |--------------------------------------------------------------------------
+  |
+  |   Below is configuration for postgres database, if your application is
+  |   dependent upon postgres, define your credentials inside .env file,
+  |   as it is a good practice to keep environment configuration
+  |   isolated for each environment.
+  |
+  |--------------------------------------------------------------------------
+  |   npm install --save pg
+  |--------------------------------------------------------------------------
+  |
+  */
+  postgres: {
+    client: 'pg',
+    connection: {
+      host: Env.get('POSTGRES_HOST', 'localhost'),
+      user: Env.get('POSTGRES_USER', 'postgres'),
+      password: Env.get('POSTGRES_PASSWORD', ''),
+      database: Env.get('POSTGRES_DATABASE', 'adonis')
+    }
   }
 
 /*
