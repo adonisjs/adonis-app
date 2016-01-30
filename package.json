@@ -12,7 +12,7 @@
     "adonis-ace": "^2.0.7",
     "adonis-commands": "^2.0.3",
     "adonis-fold": "^2.0.1",
-    "adonis-framework": "^2.0.8",
+    "adonis-framework": "^2.0.9",
     "adonis-lucid": "^2.0.5",
     "adonis-middleware": "^1.0.5",
     "ouch": "^0.2.0-beta"
