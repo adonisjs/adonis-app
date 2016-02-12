@@ -1,13 +1,12 @@
 {
-  "name": "adonis-app",
-  "version": "2.0.0",
-  "description": "Adonisjs application template",
+  "name": "YOUR APP NAME",
+  "version": "0.1.0",
+  "description": "YOUR APP NAME application template",
+  "private": true,
   "main": "server.js",
   "scripts": {
     "start": "node --harmony_proxies server.js"
   },
-  "author": "adonisjs",
-  "license": "MIT",
   "dependencies": {
     "adonis-ace": "^2.0.7",
     "adonis-commands": "^2.0.3",
