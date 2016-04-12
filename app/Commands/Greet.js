@@ -1,43 +1,38 @@
 'use strict'
 
-const Ansi = use('Ansi')
+const Command = use('Command')
 
-class Greet {
+class Greet extends Command {
 
   /**
-   * @description signature defines the expectations of command
-   * here name is the argument command is expecting from
-   * terminal
-   * @method signature
+   * signature defines the requirements and name
+   * of command.
+   *
    * @return {String}
-   * @public
    */
-  static get signature () {
-    return '{name}'
+  get signature () {
+    return 'greet {name}'
   }
 
   /**
-   * @description this is the description of your command
-   * same is shown under help
-   * @method description
+   * description is the little helpful information displayed
+   * on the console.
+   *
    * @return {String}
-   * @public
    */
-  static get description () {
-    return 'I will greet a user'
+  get description () {
+    return 'Greet a user with a name'
   }
 
   /**
-   * @description handle method is the place where you
-   * take action when your command is ran
-   * @method handle
-   * @param  {Object} options
-   * @param  {Object} flags
-   * @return {void}
-   * @public
+   * handle method is invoked automatically by ace, once your
+   * command has been executed.
+   *
+   * @param  {Object} args    [description]
+   * @param  {Object} options [description]
    */
-  * handle (options, flags) {
-    Ansi.success(`Hello ${options.name}`)
+  * handle (args, options) {
+    this.info(`Hello ${args.name}`)
   }
 
 }

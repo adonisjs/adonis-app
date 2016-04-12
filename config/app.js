@@ -6,15 +6,14 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | APP KEY
+  | App Key
   |--------------------------------------------------------------------------
   |
-  | Application is a randomly generated key required to encrypted data flow
-  | via adonis. Make sure to set this key inside .env to keep your sessions/
-  | cookies encrypted
+  | App key is a randomly generated 16 or 32 characters long string required
+  | to encrypted cookies, sessions and other sensitive data.
   |
   */
-  appKey: Env.get('APP_KEY', 'secretKey'),
+  appKey: Env.get('APP_KEY'),
 
   encryption: {
     /*
@@ -24,6 +23,9 @@ module.exports = {
     |
     | Encryption algorithm defines the algorithm to be used while encrypting
     | values. Under the hood adonis makes of node-crypto.
+    |
+    | aes-256-cbc requires 32 characters long string
+    | aes-128-cbc requires 16 characters long string
     |
     */
     algorithm: 'aes-256-cbc'
@@ -92,5 +94,44 @@ module.exports = {
     |
     */
     cache: Env.get('CACHE_VIEWS', true)
+  },
+
+  static: {
+    /*
+    |--------------------------------------------------------------------------
+    | Dot Files
+    |--------------------------------------------------------------------------
+    |
+    | Define how to treat dot files when trying to server static resources.
+    | By default it is set to ignore, which will pretend that dotfiles
+    | does not exists.
+    |
+    | Can be one of the following
+    | ignore, deny, allow
+    |
+    */
+    dotfiles: 'ignore',
+
+    /*
+    |--------------------------------------------------------------------------
+    | ETag
+    |--------------------------------------------------------------------------
+    |
+    | Enable or disable etag generation
+    |
+    */
+    etag: true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Extensions
+    |--------------------------------------------------------------------------
+    |
+    | Set file extension fallbacks. When set, if a file is not found, the given
+    | extensions will be added to the file name and search for. The first
+    | that exists will be served. Example: ['html', 'htm'].
+    |
+    */
+    extensions: false
   }
 }

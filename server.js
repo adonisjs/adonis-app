@@ -2,12 +2,16 @@
 
 /*
 |--------------------------------------------------------------------------
-| Run Server
+| Http Server
 |--------------------------------------------------------------------------
 |
-| We expose this file to node to start a new http server. All
-| magic happens inside bootstrap/http.js, this file just
-| calls the exported method to begin the magic
+| Here we boot the http server by requiring and calling the http server.
+| A callback is passed, which is called once the server is booted.
 |
 */
-require('./bootstrap/http')()
+
+const http = require('./bootstrap/http')
+http(function () {
+  const Event = use('Event')
+  Event.fire('Http.start')
+})

@@ -1,0 +1,9 @@
+{% extends 'master' %}
+
+{% block content %}
+  <h1>{{ error.status }}</h1>
+  <p> Something bad happened! <a href="/">Go Back</a> </p>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

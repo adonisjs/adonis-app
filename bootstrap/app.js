@@ -2,30 +2,30 @@
 
 /*
 |--------------------------------------------------------------------------
-| Providers
+| Application Providers
 |--------------------------------------------------------------------------
 |
-| Here we start by registering providers to Ioc container. Providers
-| are modules written for Adonis specifically. You are free to
-| remove any providers are not using.
+| Here we configure the providers required to run adonis application. They
+| are registered only once and can be used inside any file using `use`
+| keyword.
 |
 */
 const providers = [
   'adonis-framework/providers/ConfigProvider',
+  'adonis-framework/providers/EnvProvider',
+  'adonis-framework/providers/EventProvider',
   'adonis-framework/providers/HelpersProvider',
-  'adonis-framework/providers/AppProvider',
-  'adonis-framework/providers/ServerProvider',
+  'adonis-framework/providers/HashProvider',
+  'adonis-framework/providers/MiddlewareProvider',
   'adonis-framework/providers/RequestProvider',
   'adonis-framework/providers/ResponseProvider',
+  'adonis-framework/providers/RouteProvider',
+  'adonis-framework/providers/ServerProvider',
+  'adonis-framework/providers/SessionProvider',
   'adonis-framework/providers/StaticProvider',
   'adonis-framework/providers/ViewProvider',
-  'adonis-framework/providers/EnvProvider',
-  'adonis-framework/providers/RouteProvider',
-  'adonis-framework/providers/MiddlewareProvider',
-  'adonis-framework/providers/SessionProvider',
   'adonis-lucid/providers/DatabaseProvider',
   'adonis-lucid/providers/LucidProvider',
-  'adonis-ace/providers/AnsiProvider',
   'adonis-middleware/providers/AppMiddlewareProvider'
 ]
 
@@ -34,42 +34,43 @@ const providers = [
 | Ace Providers
 |--------------------------------------------------------------------------
 |
-| Ace providers are providers specific for ace only. Do not add them
-| to normal providers as they will impact the boot time of your
-| application
+| Ace providers are specific to ace, and are not registered when starting
+| http server. It helps in reducing boot time.
 |
 */
 const aceProviders = [
+  'adonis-lucid/providers/CommandsProvider',
+  'adonis-lucid/providers/FactoryProvider',
+  'adonis-lucid/providers/MigrationsProvider',
   'adonis-lucid/providers/SchemaProvider',
-  'adonis-lucid/providers/RunnerProvider',
-  'adonis-commands/providers/GeneratorProvider'
+  'adonis-lucid/providers/SeederProvider',
+  'adonis-ace/providers/CommandProvider',
+  'adonis-commands/providers/GeneratorsProvider',
+  'adonis-commands/providers/ReplProvider'
 ]
 
 /*
 |--------------------------------------------------------------------------
-| Aliases
+| Namespace Aliases
 |--------------------------------------------------------------------------
 |
-| Aliases are short names to providers namespaces. As namespaces are big
-| it is nice to register aliases for them. Just make sure aliases are
-| unique.
+| Each provider is registered with a long unique namespace. Here we alias
+| them with a short unique name to keep our import statements short and
+| sweet.
 |
 */
 const aliases = {
-  Helpers: 'Adonis/Src/Helpers',
-  Config: 'Adonis/Src/Config',
-  App: 'Adonis/Src/App',
-  Server: 'Adonis/Src/Server',
-  Static: 'Adonis/Src/Static',
-  View: 'Adonis/Src/View',
   Env: 'Adonis/Src/Env',
-  Route: 'Adonis/Src/Route',
   Middleware: 'Adonis/Src/Middleware',
-  Database: 'Adonis/Src/Database',
-  Lucid: 'Adonis/Src/Lucid',
-  Runner: 'Adonis/Src/Runner',
+  Hash: 'Adonis/Src/Hash',
+  Event: 'Adonis/Src/Event',
+  Config: 'Adonis/Src/Config',
+  Route: 'Adonis/Src/Route',
+  Helpers: 'Adonis/Src/Helpers',
+  Factory: 'Adonis/Src/Factory',
   Schema: 'Adonis/Src/Schema',
-  Ansi: 'Adonis/Src/Ansi'
+  Lucid: 'Adonis/Src/Lucid',
+  Command: 'Adonis/Src/Command'
 }
 
 /*
@@ -77,19 +78,29 @@ const aliases = {
 | Ace Commands
 |--------------------------------------------------------------------------
 |
-| Ace commands are terminal commands, you should register them here before
-| using them.
+| Ace Commands are also are registered inside the IoC container. Here we
+| register with Ace Kernel using their unique namespace.
 |
 */
-const commands = {
-  'greet:user': 'App/Commands/Greet',
-  'migration:make': 'Adonis/Commands/Make',
-  'migration:run': 'Adonis/Commands/Run',
-  'migration:rollback': 'Adonis/Commands/Rollback',
-  'make:controller': 'Adonis/Commands/Generate:Controller',
-  'make:model': 'Adonis/Commands/Generate:Model',
-  'make:command': 'Adonis/Commands/Generate:Command',
-  'make:middleware': 'Adonis/Commands/Generate:Middleware'
-}
+const commands = [
+  'App/Commands/Greet',
+  'Adonis/Commands/Repl',
+  'Adonis/Commands/Make:Controller',
+  'Adonis/Commands/Make:Migration',
+  'Adonis/Commands/Make:Model',
+  'Adonis/Commands/Make:View',
+  'Adonis/Commands/Make:Command',
+  'Adonis/Commands/Make:Hook',
+  'Adonis/Commands/Make:Middleware',
+  'Adonis/Commands/Make:Seed',
+  'Adonis/Commands/Make:Listener',
+  'Adonis/Commands/Migration:Run',
+  'Adonis/Commands/Migration:Rollback',
+  'Adonis/Commands/Migration:Refresh',
+  'Adonis/Commands/Migration:Reset',
+  'Adonis/Commands/DB:Seed',
+  'Adonis/Commands/Migration:Status',
+  'Adonis/Commands/Key:Generate'
+]
 
-module.exports = {providers, aliases, commands, aceProviders}
+module.exports = { providers, aceProviders, aliases, commands }
