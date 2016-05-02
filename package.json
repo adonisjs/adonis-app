@@ -13,7 +13,7 @@
   "dependencies": {
     "adonis-ace": "git+https://github.com/adonisjs/ace.git#develop",
     "adonis-commands": "git+https://github.com/adonisjs/adonis-commands.git#develop",
-    "adonis-fold": "^3.0.0",
+    "adonis-fold": "^3.0.1",
     "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
     "adonis-lucid": "git+https://github.com/adonisjs/adonis-lucid.git#feature-version-3",
     "adonis-middleware": "git+https://github.com/adonisjs/adonis-middleware.git#develop",
