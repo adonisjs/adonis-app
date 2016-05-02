@@ -1,5 +1,7 @@
 'use strict'
 
+const Config = use('Config')
+
 module.exports = {
 
   /*
@@ -63,7 +65,7 @@ module.exports = {
     serializer: 'Lucid',
     model: 'App/Model/User',
     scheme: 'jwt',
-    secret: '@ref=app.appKey'
+    secret: Config.get('app.appKey')
   },
 
   /*
