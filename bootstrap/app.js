@@ -26,7 +26,8 @@ const providers = [
   'adonis-framework/providers/ViewProvider',
   'adonis-lucid/providers/DatabaseProvider',
   'adonis-lucid/providers/LucidProvider',
-  'adonis-middleware/providers/AppMiddlewareProvider'
+  'adonis-middleware/providers/AppMiddlewareProvider',
+  'adonis-auth/providers/AuthManagerProvider'
 ]
 
 /*
@@ -67,6 +68,7 @@ const aliases = {
   Config: 'Adonis/Src/Config',
   Route: 'Adonis/Src/Route',
   Helpers: 'Adonis/Src/Helpers',
+  Database: 'Adonis/Src/Database',
   Factory: 'Adonis/Src/Factory',
   Schema: 'Adonis/Src/Schema',
   Lucid: 'Adonis/Src/Lucid',
@@ -84,6 +86,7 @@ const aliases = {
 */
 const commands = [
   'App/Commands/Greet',
+  'Adonis/Commands/Auth:Setup',
   'Adonis/Commands/Repl',
   'Adonis/Commands/Make:Controller',
   'Adonis/Commands/Make:Migration',
