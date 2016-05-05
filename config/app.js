@@ -34,6 +34,19 @@ module.exports = {
   http: {
     /*
     |--------------------------------------------------------------------------
+    | Allow Method Spoofing
+    |--------------------------------------------------------------------------
+    |
+    | Method spoofing allows to make requests by spoofing the http verb.
+    | Which means you can make a GET request but instruct the server to
+    | treat as a POST or PUT request. If you want this feature, set the
+    | below value to true.
+    |
+    */
+    allowMethodSpoofing: true,
+
+    /*
+    |--------------------------------------------------------------------------
     | Trust Proxy
     |--------------------------------------------------------------------------
     |
@@ -93,7 +106,18 @@ module.exports = {
     | production to optimize view loading time.
     |
     */
-    cache: Env.get('CACHE_VIEWS', true)
+    cache: Env.get('CACHE_VIEWS', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Service Injection
+    |--------------------------------------------------------------------------
+    |
+    | Inside your nunjucks views, you can inject models, services etc using
+    | IoC container. Setting it to false will disable this feature.
+    |
+    */
+    injectServices: true
   },
 
   static: {
