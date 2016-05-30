@@ -72,7 +72,8 @@ const aliases = {
   Factory: 'Adonis/Src/Factory',
   Schema: 'Adonis/Src/Schema',
   Lucid: 'Adonis/Src/Lucid',
-  Command: 'Adonis/Src/Command'
+  Command: 'Adonis/Src/Command',
+  View: 'Adonis/Src/View'
 }
 
 /*
