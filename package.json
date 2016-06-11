@@ -18,7 +18,7 @@
     "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
     "adonis-lucid": "git+https://github.com/adonisjs/adonis-lucid.git#feature-version-3",
     "adonis-middleware": "git+https://github.com/adonisjs/adonis-middleware.git#develop",
-    "youch": "^1.0.0"
+    "youch": "^1.0.1"
   },
   "autoload": {
     "App": "./app"
