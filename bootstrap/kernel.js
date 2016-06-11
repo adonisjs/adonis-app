@@ -57,5 +57,5 @@ module.exports = function () {
       Ace.register(app.commands)
       Ace.invoke(require(packageFile))
     })
-    .catch(console.error)
+    .catch((error) => console.error(error.stack))
 }

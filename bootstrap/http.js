@@ -82,5 +82,5 @@ module.exports = function (callback) {
         callback()
       }
     })
-    .catch(console.error)
+    .catch((error) => console.error(error.stack))
 }
