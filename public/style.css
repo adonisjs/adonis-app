@@ -1,30 +1,30 @@
-body{
+body {
   font-family: 'Source Sans Pro', sans-serif;
-  -webkit-font-feature-settings: "kern","liga","pnum";
-  -moz-font-feature-settings: "kern","liga","pnum";
-  -ms-font-feature-settings: "kern","liga","pnum";
-  font-feature-settings: "kern","liga","pnum";
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   font-weight: lighter;
   background: #ffffff;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-.__banner{
+.__banner {
   background: #744d82;
-  background: -moz-radial-gradient(top,ellipse cover,#744d82 11%,#503d67 99%,#503d67 100%);
-  background: -webkit-gradient(radial,top center,0,center center,100%,color-stop(11%,#744d82),color-stop(99%,#503d67),color-stop(100%,#503d67));
-  background: -webkit-radial-gradient(top,ellipse cover,#744d82 11%,#503d67 99%,#503d67 100%);
-  background: -o-radial-gradient(top,ellipse cover,#744d82 11%,#503d67 99%,#503d67 100%);
-  background: -ms-radial-gradient(top,ellipse cover,#744d82 11%,#503d67 99%,#503d67 100%);
-  background: radial-gradient(ellipse at top,#744d82 11%,#503d67 99%,#503d67 100%);
+  background: -moz-radial-gradient(top, ellipse cover, #744d82 11%, #503d67 99%, #503d67 100%);
+  background: -webkit-gradient(radial, top center, 0, center center, 100%, color-stop(11%, #744d82), color-stop(99%, #503d67), color-stop(100%, #503d67));
+  background: -webkit-radial-gradient(top, ellipse cover, #744d82 11%, #503d67 99%, #503d67 100%);
+  background: -o-radial-gradient(top, ellipse cover, #744d82 11%, #503d67 99%, #503d67 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #744d82 11%, #503d67 99%, #503d67 100%);
+  background: radial-gradient(ellipse at top, #744d82 11%, #503d67 99%, #503d67 100%);
 }
 
-.__banner{
+.__banner {
   height: 80vh;
   width: 100%;
   padding-bottom: 30px;
@@ -32,18 +32,18 @@ body{
   display: table;
 }
 
-.__banner .banner__inner{
+.__banner .banner__inner {
   display: table-cell;
   vertical-align: middle;
 }
 
-.__banner .banner__inner h1{
+.__banner .banner__inner h1 {
   font-weight: 500;
   font-size: 180px;
   color: #ffffff;
 }
 
-.__banner .banner__inner h2{
+.__banner .banner__inner h2 {
   margin-bottom: 25px;
   text-align: center;
   letter-spacing: 3px;
@@ -54,18 +54,19 @@ body{
   color: #ffffff;
 }
 
-.__banner .banner__inner p, .__banner .banner__inner a {
+.__banner .banner__inner p,
+.__banner .banner__inner a {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
 }
 
-.__banner .banner__inner h2 span{
+.__banner .banner__inner h2 span {
   display: inline-block;
   margin: 0 30px;
 }
 
-.__footer{
+.__footer {
   text-align: center;
   position: absolute;
   bottom: 30px;
@@ -74,21 +75,21 @@ body{
   left: 0;
 }
 
-.__footer ul{
+.__footer ul {
   display: table;
   margin: auto;
 }
 
-.__footer li{
+.__footer li {
   border-left: solid 2px #ccc;
   display: table-cell;
 }
 
-.__footer li:first-child{
+.__footer li:first-child {
   border: none;
 }
 
-.__footer li a{
+.__footer li a {
   transition: opacity 0.5s;
   text-decoration: none;
   display: inline-block;
@@ -99,6 +100,6 @@ body{
   color: #ccc;
 }
 
-.__footer li a:hover{
+.__footer li a:hover {
   opacity: 1;
 }

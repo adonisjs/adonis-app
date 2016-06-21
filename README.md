@@ -1,6 +1,6 @@
 # AdonisJs Application
 
-This repo is the pre-configured project structure to be used for creating ambitious web applications using AdonisJs.
+This repo is the pre-configured project structure to be used for creating ambitious web servers using AdonisJs.
 
 > Make sure to star the official [framework repo](https://github.com/adonisjs/adonis-framework) or [tweet on twitter](https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I%20am%20using%20AdonisJs,%20a%20practical%20MVC%20framework%20for%20nodejs&hashtags=nodejs,adonisframework) :wave:
 
@@ -18,7 +18,7 @@ He was so excited and full of energy to build this application and share it with
 4. What do I need to do to secure my application from web attacks and how to handle CORS?
 5. Why do I have ton of `require` statements everywhere?
 6. How the heck should I test my code? I am having hard time mocking dependencies.
-7. **WHY THE FISH** there are no standards to write some code. Hell I am not going to write this application and going for a walk.
+7. **WHY THE :fish:** there are no standards to write some code. Hell I am not going to write this application and going for a walk.
 
 
 ## Not Anymore

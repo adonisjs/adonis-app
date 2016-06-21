@@ -29,7 +29,7 @@ Http.handleError = function * (error, request, response) {
    * PRODUCTION REPORTER
    */
   const status = error.status || 500
-  console.error(error)
+  console.error(error.stack)
   yield response.status(status).sendView('errors/index', {error})
 }
 

@@ -5,8 +5,9 @@
 | Http Server
 |--------------------------------------------------------------------------
 |
-| Here we boot the http server by requiring and calling the http server.
-| A callback is passed, which is called once the server is booted.
+| Here we boot the HTTP Server by calling the exported method. A callback
+| function is optionally passed which is executed, once the HTTP server
+| is booted.
 |
 */
 
