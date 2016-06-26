@@ -1,84 +1,78 @@
 'use strict'
 
-const Helpers = use('Helpers')
 const Env = use('Env')
+const Helpers = use('Helpers')
 
 module.exports = {
+
   /*
   |--------------------------------------------------------------------------
-  | Connection
+  | Default Connection
   |--------------------------------------------------------------------------
   |
-  | Connection defines the settings to be used while setting up a database
-  | it is a reference of defined connections below in this file.
+  | Connection defines the default connection settings to be used while
+  | interacting with SQL databases.
   |
   */
   connection: Env.get('DB_CONNECTION', 'sqlite'),
 
   /*
   |--------------------------------------------------------------------------
-  | Migrations Table
+  | Sqlite
   |--------------------------------------------------------------------------
   |
-  | By default adonis database migrations table is set to adonis_schema.
-  | Here is your chance to override it.
+  | Sqlite is a flat file database and can be good choice under development
+  | environment.
   |
-  */
-   migrationsTable: 'adonis_schema',
-
-  /*
-  |--------------------------------------------------------------------------
-  |   Sqlite Connection
-  |--------------------------------------------------------------------------
-  |
-  |   Here we define sqlite connection to be used by your models or
-  |   Database provider. It is good keep development database as
-  |   sqlite , rest depends upon your application preferences.
-  |
-  |--------------------------------------------------------------------------
-  |   npm install --save-dev sqlite3
-  |--------------------------------------------------------------------------
+  | npm i --save sqlite3
   |
   */
   sqlite: {
     client: 'sqlite3',
     connection: {
-      filename: Helpers.storagePath('development.sqlite3')
+      filename: Helpers.databasePath('development.sqlite')
     },
-    debug: false
+    useNullAsDefault: true
   },
 
   /*
   |--------------------------------------------------------------------------
-  |   Mysql Connection
+  | Mysql
   |--------------------------------------------------------------------------
   |
-  |   Below is configuration for mysql database, if your application is
-  |   dependent upon mysql , define your credentials inside .env file,
-  |   as it is a good practice to keep environment configuration
-  |   isolated for each environment.
+  | Here we define connection settings for Mysql database.
   |
-  |--------------------------------------------------------------------------
-  |   npm install --save mysql
-  |--------------------------------------------------------------------------
+  | npm i --save mysql
   |
   */
   mysql: {
     client: 'mysql',
     connection: {
-      host: Env.get('MYSQL_HOST', 'localhost'),
-      user: Env.get('MYSQL_USER', 'root'),
-      password: Env.get('MYSQL_PASSWORD', ''),
-      database: Env.get('MYSQL_DATABASE', 'adonis')
+      host: Env.get('DB_HOST', 'localhost'),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis')
+    }
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | PostgreSQL
+  |--------------------------------------------------------------------------
+  |
+  | Here we define connection settings for Mysql database.
+  |
+  | npm i --save pg
+  |
+  */
+  pg: {
+    client: 'pg',
+    connection: {
+      host: Env.get('DB_HOST', 'localhost'),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis')
     }
   }
 
-/*
-|--------------------------------------------------------------------------
-|   Feel Free
-|--------------------------------------------------------------------------
-|
-|  Feel free to define as many connections you like to define.
-|
-*/
 }

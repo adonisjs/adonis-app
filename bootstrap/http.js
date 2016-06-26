@@ -2,100 +2,85 @@
 
 /*
 |--------------------------------------------------------------------------
-|   Bootstrap App
+| HTTP Server Setup
 |--------------------------------------------------------------------------
 |
-|  Here we bootstrap our http server by registering providers to IOC
-|  container , registering aliases and autoloading app directory.
+| Here we join different pieces and start the HTTP server. It will be
+| a matter of seconds to start your shiny Adonis application.
 |
 */
 
-const fold = require('adonis-fold')
 const app = require('./app')
+const fold = require('adonis-fold')
 const path = require('path')
-const Registrar = fold.Registrar
-const Ioc = fold.Ioc
+const packageFile = path.join(__dirname, '../package.json')
 require('./extend')
 
-module.exports = function () {
-  Registrar
+module.exports = function (callback) {
+  fold.Registrar
     .register(app.providers)
-    .then(function () {
+    .then(() => {
       /*
       |--------------------------------------------------------------------------
-      | Setting up providers aliases
+      | Register Aliases
       |--------------------------------------------------------------------------
       |
-      | Adonis providers are registered with long namespace, which
-      | may be difficult to remember. Aliases are short names
-      | mapped to namespaces
+      | After registering all the providers, we need to setup aliases so that
+      | providers can be referenced with short sweet names.
       |
       */
-      Ioc.aliases(app.aliases)
+      fold.Ioc.aliases(app.aliases)
 
       /*
       |--------------------------------------------------------------------------
-      | Setting up helpers
+      | Register Package File
       |--------------------------------------------------------------------------
       |
-      | Helpers gives you easy access to different paths and folders inside your
-      | application. Here we setup helpers by passing path to the package file
-      | of this application.
+      | Adonis application package.json file has the reference to the autoload
+      | directory. Here we register the package file with the Helpers provider
+      | to setup autoloading.
       |
       */
-      const packageFile = path.join(__dirname, '../package.json')
       const Helpers = use('Helpers')
-      Helpers.load(packageFile, Ioc)
-      const appNameSpace = Helpers.appNameSpace()
-
-      /*
-      |--------------------------------------------------------------------------
-      | Emitting app start event
-      |--------------------------------------------------------------------------
-      |
-      | Emitting app start event to notify application has been booted. From
-      | here you can access/extend providers.
-      |
-      */
-      require('./start')
-      const App = use('App')
-      App.emit('start')
-
-      /*
-      |--------------------------------------------------------------------------
-      | Loading Middleware
-      |--------------------------------------------------------------------------
-      |
-      | Here we load all middleware required by http requests.
-      |
-      */
-      use(`${appNameSpace}/Http/kernel`)
-
-      /*
-      |--------------------------------------------------------------------------
-      | Loading Routes
-      |--------------------------------------------------------------------------
-      |
-      | Here we load all registered routes required by http requests.
-      |
-      */
-      use(`${appNameSpace}/Http/routes`)
-
-      /*
-      |--------------------------------------------------------------------------
-      | Booting Server
-      |--------------------------------------------------------------------------
-      |
-      | Finally we boot our http server on a given host and port. If you are
-      | planning to use https follow below example.
-      | @example
-      | const https = use('https')
-      | https.createServer(options, Server.handle.bind(Server)).listen()
-      |
-      */
-      const Server = use('Server')
       const Env = use('Env')
-      Server.listen(Env.get('APP_HOST'), Env.get('APP_PORT'))
+      Helpers.load(packageFile, fold.Ioc)
+
+      /*
+      |--------------------------------------------------------------------------
+      | Register Events
+      |--------------------------------------------------------------------------
+      |
+      | Here we require the event.js file to register events defined inside
+      | events.js file.
+      |
+      */
+      require('./events')
+
+      /*
+      |--------------------------------------------------------------------------
+      | Load Middleware And Routes
+      |--------------------------------------------------------------------------
+      |
+      | Middleware and Routes are required to oil up your HTTP server. Here we
+      | require defined files for same.
+      |
+      */
+      use(Helpers.makeNameSpace('Http', 'kernel'))
+      use(Helpers.makeNameSpace('Http', 'routes'))
+
+      /*
+      |--------------------------------------------------------------------------
+      | Start Http Server
+      |--------------------------------------------------------------------------
+      |
+      | We are all set to fire the Http Server and start receiving new requests.
+      |
+      */
+      const Server = use('Adonis/Src/Server')
+      Server.listen(Env.get('HOST'), Env.get('PORT'))
+      if (typeof (callback) === 'function') {
+        callback()
+      }
     })
-    .catch(console.error)
+    .catch((error) => console.error(error.stack))
 }

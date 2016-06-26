@@ -1,24 +1,29 @@
 {
   "name": "adonis-app",
-  "version": "2.0.0",
-  "description": "Adonisjs application template",
-  "main": "server.js",
+  "version": "3.0.0",
+  "main": "index.js",
   "scripts": {
+    "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x 'node --harmony_proxies' server.js",
     "start": "node --harmony_proxies server.js"
   },
-  "author": "adonisjs",
+  "author": "",
   "license": "MIT",
+  "description": "",
+  "private": true,
   "dependencies": {
-    "adonis-ace": "^2.0.7",
-    "adonis-commands": "^2.0.3",
-    "adonis-fold": "^2.0.1",
-    "adonis-framework": "^2.0.9",
-    "adonis-lucid": "^2.0.5",
-    "adonis-middleware": "^1.0.5",
-    "ouch": "^0.2.0-beta"
+    "adonis-ace": "^3.0.1",
+    "adonis-auth": "^1.0.0",
+    "adonis-commands": "^2.1.0",
+    "adonis-fold": "^3.0.2",
+    "adonis-framework": "^3.0.0",
+    "adonis-lucid": "^3.0.1",
+    "adonis-middleware": "^1.0.6",
+    "youch": "^1.0.1"
   },
   "autoload": {
     "App": "./app"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
 }

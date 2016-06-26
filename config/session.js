@@ -95,4 +95,5 @@ module.exports = {
   file: {
     directory: 'sessions'
   }
+
 }

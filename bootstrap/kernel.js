@@ -2,86 +2,60 @@
 
 /*
 |--------------------------------------------------------------------------
-|   Bootstrap App
+| Ace Setup
 |--------------------------------------------------------------------------
 |
-|  Here we bootstrap our app by registering providers to IOC
-|  container , registering aliases and autoloading app directory.
+| Ace is the command line utility to create and run terminal commands.
+| Here we setup the environment and register ace commands.
 |
 */
 
-const fold = require('adonis-fold')
 const app = require('./app')
+const fold = require('adonis-fold')
 const Ace = require('adonis-ace')
 const path = require('path')
-const Registrar = fold.Registrar
-const Ioc = fold.Ioc
-const allProviders = app.providers.concat(app.aceProviders)
+const packageFile = path.join(__dirname, '../package.json')
 require('./extend')
 
 module.exports = function () {
-  Registrar
-    .register(allProviders)
-    .then(function () {
+  fold.Registrar
+    .register(app.providers.concat(app.aceProviders))
+    .then(() => {
       /*
       |--------------------------------------------------------------------------
-      | Setting up providers aliases
+      | Register Aliases
       |--------------------------------------------------------------------------
       |
-      | Adonis providers are registered with long namespace, which
-      | may be difficult to remember. Aliases are short names
-      | mapped to namespaces
+      | After registering all the providers, we need to setup aliases so that
+      | providers can be referenced with short sweet names.
       |
       */
-      Ioc.aliases(app.aliases)
+      fold.Ioc.aliases(app.aliases)
 
       /*
       |--------------------------------------------------------------------------
-      | Setting up helpers
+      | Register Package File
       |--------------------------------------------------------------------------
       |
-      | Helpers gives you easy access to different paths and folders inside your
-      | application. Here we setup helpers by passing path to the package file
-      | of this application.
+      | Adonis application package.json file has the reference to the autoload
+      | directory. Here we register the package file with the Helpers provider
+      | to setup autoloading.
       |
       */
-      const packageFile = path.join(__dirname, '../package.json')
       const Helpers = use('Helpers')
-      Helpers.load(packageFile, Ioc)
+      Helpers.load(packageFile, fold.Ioc)
 
       /*
       |--------------------------------------------------------------------------
-      | Emitting app start event
+      | Register/Invoke Commands
       |--------------------------------------------------------------------------
       |
-      | Emitting app start event to notify application has been booted. From
-      | here you can access/extend providers.
+      | Here we register commands with the Ace kernel and invoke the currently
+      | executed command. It's so simple :)
       |
       */
-      require('./start')
-      const App = use('App')
-      App.emit('start')
-
-      /*
-      |--------------------------------------------------------------------------
-      | Registering Commands
-      |--------------------------------------------------------------------------
-      |
-      | Next we register our commands to the ace store, which will picked
-      | by ace as we type them on terminal
-      |
-      */
-      Ace.Store.register(app.commands)
-
-      /*
-      |--------------------------------------------------------------------------
-      | Invoking Command
-      |--------------------------------------------------------------------------
-      |
-      | Finally we construct ace to invoke the command
-      |
-      */
-      Ace.Runner.invoke(require('adonis-framework/package.json'))
+      Ace.register(app.commands)
+      Ace.invoke(require(packageFile))
     })
-    .catch(console.error)
+    .catch((error) => console.error(error.stack))
 }

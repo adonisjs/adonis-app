@@ -1,56 +1,35 @@
-# AdonisJS
+# AdonisJs Application
 
-[![Gitter](https://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square)](https://gitter.im/adonisjs/adonis-framework)
-[![Trello](https://img.shields.io/badge/TRELLO-%E2%86%92-89609E.svg?style=flat-square)](https://trello.com/b/yzpqCgdl/adonis-for-humans)
-[![Version](https://img.shields.io/npm/v/adonis-framework.svg?style=flat-square)](https://www.npmjs.com/package/adonis-framework)
-[![Build Status](https://img.shields.io/travis/adonisjs/adonis-framework/master.svg?style=flat-square)](https://travis-ci.org/adonisjs/adonis-framework)
-[![Coverage Status](https://img.shields.io/coveralls/adonisjs/adonis-framework/master.svg?style=flat-square)](https://coveralls.io/github/adonisjs/adonis-framework?branch=master)
-[![Downloads](https://img.shields.io/npm/dt/adonis-framework.svg?style=flat-square)](https://www.npmjs.com/package/adonis-framework)
-[![License](https://img.shields.io/npm/l/adonis-framework.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+This repo is the pre-configured project structure to be used for creating ambitious web servers using AdonisJs.
 
-> :pray: This repository contains the blueprint of adonis application.
+> Make sure to star the official [framework repo](https://github.com/adonisjs/adonis-framework) or [tweet on twitter](https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I%20am%20using%20AdonisJs,%20a%20practical%20MVC%20framework%20for%20nodejs&hashtags=nodejs,adonisframework) :wave:
 
-Adonis is a MVC framework for NodeJS built on solid foundations.
+## Story
 
-It is the first NodeJS framework with support for [Dependency Injection](http://adonisjs.com/docs/2.0/dependency-injection) and has a lean [IoC Container](http://adonisjs.com/docs/2.0/ioc-container) to resolve and mock dependencies. It borrows the concept of [Service Providers](http://adonisjs.com/docs/2.0/service-providers) from the popular [PHP framework Laravel](https://laravel.com) to write scalable applications.
+One day a :boy: wanted to write a web application to slowly turn it into a business and make some :moneybag: for better living. Being a Javascript lover, he decided to go with Node.js. 
 
-You can learn more about AdonisJS and all of its awesomeness on http://adonisjs.com :evergreen_tree:
+Hosting Node.js applications are cheap and offers lots of mordern programming concepts to build realtime data rich applications.
 
-## Table of Contents
+He was so excited and full of energy to build this application and share it with the world. But soon his dreams started struggling with the amount of decisions he has to make, just to build an MVP of his idea. These decisions were not even related to the business and was about.
 
-* [Team Members](#team-members)
-* [Requirements](#requirements)
-* [Getting Started](#getting-started)
-* [Contribution Guidelines](#contribution-guidelines)
+1. How should I structure my application?
+2. Why do I need to download 20 modules just to start an HTTP server, parse request body and upload files.
+3. How should I manage the authentication on website, and expose public API for others to interact with the data?
+4. What do I need to do to secure my application from web attacks and how to handle CORS?
+5. Why do I have ton of `require` statements everywhere?
+6. How the heck should I test my code? I am having hard time mocking dependencies.
+7. **WHY THE :fish:** there are no standards to write some code. Hell I am not going to write this application and going for a walk.
 
-## <a name="team-members"></a>Team Members
 
-* Harminder Virk ([Caffiene Blogging](http://amanvirk.me/)) <virk.officials@gmail.com>
+## Not Anymore
 
-## <a name="requirements"></a>Requirements
+This is so frustating. Node.js is a beautiful language but all of the above questions have never been answered together. We all love writing small concise modules but business are not created by downloading 20 modules.
 
-AdonisJS is build on the top of ES2015, which makes the code more enjoyable and cleaner to read. It doesn't make use of any transpiler and depends upon Core V8 implemented features.
+Developers needs productive tools, so that they can focus on what matters, and not on downloading & finding the best ways to combine these small modules. 
 
-For these reasons, AdonisJS require you to use `node >= 4.0` and `npm >= 3.0`.
+## AdonisJs
 
-## <a name="getting-started"></a>Getting Started
+AdonisJs is a beautiful framework with pre-configured answers to all of your questions. We not only created this framework, but validated the features of framework with realtime problems and still improving every bit, so that you have to write less and structured code.
 
-AdonisJS provide a [CLI tool](https://github.com/AdonisJs/adonis-cli) to scaffold and generate a project with all required dependencies.
+This time a :boy: will write his ambitious application and will set the world on :fire:``. Don't hesitate to work on your ideas and we promise to improve the framework every :sunny: and :first_quarter_moon_with_face: and YESSSS do not forget to star us on [:octocat:](https://github.com/adonisjs/adonis-framework)
 
-```bash
-$ npm install -g adonis-cli
-```
-
-```bash
-$ adonis new awesome-project
-$ cd awesome-project
-$ npm run start
-```
-
-[Official Documentation](http://adonisjs.com/docs/2.0/installation)
-
-## <a name="contribution-guidelines"></a>Contribution Guidelines
-
-In favor of active development we accept contributions for everyone. You can contribute by submitting a bug, creating pull requests or even improving documentation.
-
-You can find a complete guide to be followed strictly before submitting your pull requests in the [Official Documentation](http://adonisjs.com/docs/2.0/contributing).
