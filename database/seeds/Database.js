@@ -17,7 +17,6 @@ const Factory = use('Factory')
 class DatabaseSeeder {
 
   * run () {
-    // yield Factory.model('App/Model/User').create()
     // yield Factory.model('App/Model/User').create(5)
   }
 
