@@ -1,7 +1,7 @@
 'use strict'
 
-const Ouch = use('youch')
 const Env = use('Env')
+const Ouch = use('youch')
 const Http = exports = module.exports = {}
 
 /**

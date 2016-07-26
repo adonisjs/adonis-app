@@ -61,18 +61,18 @@ const aceProviders = [
 |
 */
 const aliases = {
-  Env: 'Adonis/Src/Env',
-  Middleware: 'Adonis/Src/Middleware',
-  Hash: 'Adonis/Src/Hash',
-  Event: 'Adonis/Src/Event',
-  Config: 'Adonis/Src/Config',
-  Route: 'Adonis/Src/Route',
-  Helpers: 'Adonis/Src/Helpers',
-  Database: 'Adonis/Src/Database',
-  Factory: 'Adonis/Src/Factory',
-  Schema: 'Adonis/Src/Schema',
-  Lucid: 'Adonis/Src/Lucid',
   Command: 'Adonis/Src/Command',
+  Config: 'Adonis/Src/Config',
+  Database: 'Adonis/Src/Database',
+  Env: 'Adonis/Src/Env',
+  Event: 'Adonis/Src/Event',
+  Factory: 'Adonis/Src/Factory',
+  Hash: 'Adonis/Src/Hash',
+  Helpers: 'Adonis/Src/Helpers',
+  Lucid: 'Adonis/Src/Lucid',
+  Middleware: 'Adonis/Src/Middleware',
+  Route: 'Adonis/Src/Route',
+  Schema: 'Adonis/Src/Schema',
   View: 'Adonis/Src/View'
 }
 
