@@ -7,7 +7,7 @@
 |
 | Here you register events and define their listeners, which can be inline
 | closures or reference to a Listener inside app/Listeners. Also your
-| listeners can be aysnc.
+| listeners can be async.
 |
 | Listeners are saved in app/Listeners directory.
 |
