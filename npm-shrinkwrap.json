@@ -47,7 +47,7 @@
     "adonis-framework": {
       "version": "3.0.1",
       "from": "adonis-framework@>=3.0.1 <4.0.0",
-      "resolved": "file:../../adonis-official/framework",
+      "resolved": "https://registry.npmjs.org/adonis-framework/-/adonis-framework-3.0.1.tgz",
       "dependencies": {
         "minimist": {
           "version": "0.0.8",
@@ -67,9 +67,9 @@
       "resolved": "https://registry.npmjs.org/adonis-lucid/-/adonis-lucid-3.0.2.tgz"
     },
     "adonis-middleware": {
-      "version": "1.0.6",
-      "from": "adonis-middleware@1.0.6",
-      "resolved": "https://registry.npmjs.org/adonis-middleware/-/adonis-middleware-1.0.6.tgz"
+      "version": "1.0.7",
+      "from": "adonis-middleware@1.0.7",
+      "resolved": "https://registry.npmjs.org/adonis-middleware/-/adonis-middleware-1.0.7.tgz"
     },
     "ansi": {
       "version": "0.3.1",
