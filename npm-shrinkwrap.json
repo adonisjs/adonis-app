@@ -62,9 +62,9 @@
       }
     },
     "adonis-lucid": {
-      "version": "3.0.2",
-      "from": "adonis-lucid@3.0.2",
-      "resolved": "https://registry.npmjs.org/adonis-lucid/-/adonis-lucid-3.0.2.tgz"
+      "version": "3.0.3",
+      "from": "adonis-lucid@3.0.3",
+      "resolved": "https://registry.npmjs.org/adonis-lucid/-/adonis-lucid-3.0.3.tgz"
     },
     "adonis-middleware": {
       "version": "1.0.7",
@@ -1802,9 +1802,9 @@
       "resolved": "https://registry.npmjs.org/platform/-/platform-1.3.1.tgz"
     },
     "pool2": {
-      "version": "1.3.4",
+      "version": "1.3.5",
       "from": "pool2@>=1.1.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/pool2/-/pool2-1.3.4.tgz"
+      "resolved": "https://registry.npmjs.org/pool2/-/pool2-1.3.5.tgz"
     },
     "preserve": {
       "version": "0.2.0",
