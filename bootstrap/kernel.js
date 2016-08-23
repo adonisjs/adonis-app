@@ -44,6 +44,7 @@ module.exports = function () {
       */
       const Helpers = use('Helpers')
       Helpers.load(packageFile, fold.Ioc)
+      use(Helpers.databasePath('factory'))
 
       /*
       |--------------------------------------------------------------------------
