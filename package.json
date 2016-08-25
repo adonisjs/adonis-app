@@ -24,6 +24,10 @@
     "App": "./app"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^6.0.0-10",
+    "laravel-elixir-webpack-official": "^1.0.4",
+    "lodash": "^4.14.0",
     "nodemon": "^1.9.1"
   }
 }
