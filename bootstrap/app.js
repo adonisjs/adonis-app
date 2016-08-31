@@ -26,6 +26,7 @@ const providers = [
   'adonis-framework/providers/ViewProvider',
   'adonis-lucid/providers/DatabaseProvider',
   'adonis-lucid/providers/LucidProvider',
+  'adonis-lucid/providers/FactoryProvider',
   'adonis-middleware/providers/AppMiddlewareProvider',
   'adonis-auth/providers/AuthManagerProvider'
 ]
@@ -41,7 +42,6 @@ const providers = [
 */
 const aceProviders = [
   'adonis-lucid/providers/CommandsProvider',
-  'adonis-lucid/providers/FactoryProvider',
   'adonis-lucid/providers/MigrationsProvider',
   'adonis-lucid/providers/SchemaProvider',
   'adonis-lucid/providers/SeederProvider',

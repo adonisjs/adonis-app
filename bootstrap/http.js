@@ -67,6 +67,7 @@ module.exports = function (callback) {
       */
       use(Helpers.makeNameSpace('Http', 'kernel'))
       use(Helpers.makeNameSpace('Http', 'routes'))
+      use(Helpers.databasePath('factory'))
 
       /*
       |--------------------------------------------------------------------------
