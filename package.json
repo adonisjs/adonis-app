@@ -4,26 +4,31 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x \"node --harmony_proxies\" server.js",
-    "start": "node --harmony_proxies server.js"
+    "start": "node --harmony_proxies server.js",
+    "lint": "standard"
   },
   "author": "",
   "license": "MIT",
   "description": "",
   "private": true,
   "dependencies": {
-    "adonis-ace": "^3.0.1",
-    "adonis-auth": "^1.0.0",
-    "adonis-commands": "^2.1.0",
-    "adonis-fold": "^3.0.2",
-    "adonis-framework": "^3.0.1",
-    "adonis-lucid": "^3.0.3",
-    "adonis-middleware": "^1.0.7",
+    "adonis-ace": "git+https://github.com/adonisjs/ace.git#develop",
+    "adonis-auth": "git+https://github.com/adonisjs/adonis-auth.git#develop",
+    "adonis-commands": "git+https://github.com/adonisjs/adonis-commands.git#develop",
+    "adonis-fold": "^3.0.3",
+    "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
+    "adonis-lucid": "git+https://github.com/adonisjs/adonis-lucid.git#develop",
+    "adonis-middleware": "git+https://github.com/adonisjs/adonis-middleware.git#develop",
     "youch": "^1.0.1"
+  },
+  "standard": {
+    "global": ["use", "make"]
   },
   "autoload": {
     "App": "./app"
   },
   "devDependencies": {
-    "nodemon": "^1.9.1"
+    "nodemon": "^1.9.1",
+    "standard": "^8.0.0"
   }
 }
