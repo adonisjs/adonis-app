@@ -12,7 +12,7 @@ module.exports = {
   | APP_KEY inside .env file to keep cookies encrypted and signed.
   |
   | Available Options are :-
-  | cookie or file
+  | cookie, file, redis
   */
   driver: Env.get('SESSION_DRIVER', 'cookie'),
 
@@ -48,6 +48,29 @@ module.exports = {
   |
   */
   clearWithBrowser: false,
+
+  /*
+  |--------------------------------------------------------------------------
+  | Http Only Cookie
+  |--------------------------------------------------------------------------
+  |
+  | Keep cookie http only, which means javascript cannot access the cookie
+  | by document.cookie.
+  |
+  */
+  httpOnly: true,
+
+  /*
+  |--------------------------------------------------------------------------
+  | Same site only
+  |--------------------------------------------------------------------------
+  |
+  | Keep cookie accessible from the same domain. Available values are
+  | true, false, lax and strict.
+  | https://tools.ietf.org/html/draft-west-first-party-cookies-07
+  |
+  */
+  sameSite: true,
 
   /*
   |--------------------------------------------------------------------------
