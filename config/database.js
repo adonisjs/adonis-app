@@ -37,10 +37,10 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | Mysql
+  | MySQL
   |--------------------------------------------------------------------------
   |
-  | Here we define connection settings for Mysql database.
+  | Here we define connection settings for MySQL database.
   |
   | npm i --save mysql
   |
@@ -60,7 +60,7 @@ module.exports = {
   | PostgreSQL
   |--------------------------------------------------------------------------
   |
-  | Here we define connection settings for Mysql database.
+  | Here we define connection settings for PostgreSQL database.
   |
   | npm i --save pg
   |
