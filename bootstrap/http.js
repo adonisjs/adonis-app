@@ -67,6 +67,16 @@ module.exports = function (callback) {
       */
       use(Helpers.makeNameSpace('Http', 'kernel'))
       use(Helpers.makeNameSpace('Http', 'routes'))
+
+      /*
+      |--------------------------------------------------------------------------
+      | Load Database Factory
+      |--------------------------------------------------------------------------
+      |
+      | All database/model blueprints are defined inside the below file. We
+      | autoload it to be used inside the entire application.
+      |
+      */
       use(Helpers.databasePath('factory'))
 
       /*

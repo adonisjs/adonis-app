@@ -44,6 +44,39 @@ module.exports = function () {
       */
       const Helpers = use('Helpers')
       Helpers.load(packageFile, fold.Ioc)
+
+      /*
+      |--------------------------------------------------------------------------
+      | Register Events
+      |--------------------------------------------------------------------------
+      |
+      | Here we require the event.js file to register events defined inside
+      | events.js file.
+      |
+      */
+      require('./events')
+
+      /*
+      |--------------------------------------------------------------------------
+      | Load Middleware And Routes
+      |--------------------------------------------------------------------------
+      |
+      | Middleware and Routes are required to oil up your HTTP server. Here we
+      | require defined files for same.
+      |
+      */
+      use(Helpers.makeNameSpace('Http', 'kernel'))
+      use(Helpers.makeNameSpace('Http', 'routes'))
+
+      /*
+      |--------------------------------------------------------------------------
+      | Load Database Factory
+      |--------------------------------------------------------------------------
+      |
+      | All database/model blueprints are defined inside the below file. We
+      | autoload it to be used inside the entire application.
+      |
+      */
       use(Helpers.databasePath('factory'))
 
       /*
