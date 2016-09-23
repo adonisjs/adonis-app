@@ -47,6 +47,7 @@ const aceProviders = [
   'adonis-lucid/providers/SeederProvider',
   'adonis-ace/providers/CommandProvider',
   'adonis-commands/providers/GeneratorsProvider',
+  'adonis-commands/providers/HelperCommandsProvider',
   'adonis-commands/providers/ReplProvider'
 ]
 
@@ -90,6 +91,7 @@ const commands = [
   'Adonis/Commands/Auth:Setup',
   'Adonis/Commands/Repl',
   'Adonis/Commands/Make:Controller',
+  'Adonis/Commands/Route:List',
   'Adonis/Commands/Make:Migration',
   'Adonis/Commands/Make:Model',
   'Adonis/Commands/Make:View',
