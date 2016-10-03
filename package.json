@@ -16,9 +16,10 @@
     "adonis-auth": "^1.0.4",
     "adonis-commands": "^2.1.2",
     "adonis-fold": "^3.0.3",
-    "adonis-framework": "^3.0.2",
-    "adonis-lucid": "^3.0.5",
+    "adonis-framework": "^3.0.3",
+    "adonis-lucid": "^3.0.6",
     "adonis-middleware": "^1.0.8",
+    "standard": "^8.3.0",
     "youch": "^1.0.1"
   },
   "standard": {
