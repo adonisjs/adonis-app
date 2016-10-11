@@ -17,7 +17,7 @@
     "adonis-commands": "^2.1.2",
     "adonis-fold": "^3.0.3",
     "adonis-framework": "^3.0.3",
-    "adonis-lucid": "^3.0.7",
+    "adonis-lucid": "^3.0.8",
     "adonis-middleware": "^1.0.8",
     "youch": "^1.0.1"
   },
