@@ -70,6 +70,17 @@ module.exports = function (callback) {
 
       /*
       |--------------------------------------------------------------------------
+      | Load Database Factory
+      |--------------------------------------------------------------------------
+      |
+      | All database/model blueprints are defined inside the below file. We
+      | autoload it to be used inside the entire application.
+      |
+      */
+      use(Helpers.databasePath('factory'))
+
+      /*
+      |--------------------------------------------------------------------------
       | Start Http Server
       |--------------------------------------------------------------------------
       |

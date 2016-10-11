@@ -28,13 +28,10 @@ body {
   height: 80vh;
   width: 100%;
   padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   text-align: center;
-  display: table;
-}
-
-.__banner .banner__inner {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .__banner .banner__inner h1 {
