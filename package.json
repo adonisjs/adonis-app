@@ -18,7 +18,7 @@
     "adonis-fold": "^3.0.3",
     "adonis-framework": "^3.0.5",
     "adonis-lucid": "^3.0.10",
-    "adonis-middleware": "^1.0.8",
+    "adonis-middleware": "^1.0.9",
     "standard": "^8.4.0",
     "youch": "^1.0.1"
   },
