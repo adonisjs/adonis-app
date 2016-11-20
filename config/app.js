@@ -43,7 +43,7 @@ module.exports = {
     | below value to true.
     |
     */
-    allowMethodSpoofing: true,
+    allowMethodSpoofing: false,
 
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ module.exports = {
     | Trust proxy defines whether X-Forwaded-* headers should be trusted or not.
     | When your application is behind a proxy server like nginx, these values
     | are set automatically and should be trusted. Apart from setting it
-    | to true or false Adonis supports handful or ways to allow proxy
+    | to true or false Adonis supports handful of ways to allow proxy
     | values. Read documentation for that.
     |
     */
@@ -82,7 +82,7 @@ module.exports = {
     | true. Consider this as a way of saying thanks to us.
     |
     */
-    setPoweredBy: true,
+    setPoweredBy: false,
 
     /*
     |--------------------------------------------------------------------------
@@ -126,7 +126,7 @@ module.exports = {
     | Dot Files
     |--------------------------------------------------------------------------
     |
-    | Define how to treat dot files when trying to server static resources.
+    | Define how to treat dot files when trying to serve static resources.
     | By default it is set to ignore, which will pretend that dotfiles
     | does not exists.
     |
@@ -195,4 +195,5 @@ module.exports = {
     */
     fallbackLocale: 'en'
   }
+
 }

@@ -3,6 +3,7 @@
 const Env = use('Env')
 
 module.exports = {
+
   /*
   |--------------------------------------------------------------------------
   | Session Driver
@@ -81,7 +82,7 @@ module.exports = {
   | domain. For single and subdomains use. ".adonisjs.com"
   |
   */
-  domain: null,
+  domain: Env.get('SESSION_DOMAIN', null),
 
   /*
   |--------------------------------------------------------------------------

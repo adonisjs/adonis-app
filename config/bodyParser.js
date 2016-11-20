@@ -1,24 +1,26 @@
 'use strict'
 
 module.exports = {
+
   /*
   |--------------------------------------------------------------------------
   | Data Limit
   |--------------------------------------------------------------------------
   |
   | Data limit to be sent on a POST request.
+  | Data Limit should be larger than 'Max Upload Size'
   |
   */
-  limit: '1mb',
+  limit: '125mb',
 
   /*
   |--------------------------------------------------------------------------
   | Strict
   |--------------------------------------------------------------------------
   |
-  | Keeping strict to true will make body parse only parse array and objects
-  | using JSON.parse. Keeping it to false will force the parse to parse all
-  | values include null.
+  | Keeping strict to true will make body parse only arrays and objects
+  | using JSON.parse. Setting it to false will force the parser to parse all
+  | values including null.
   |
   */
   strict: true,
@@ -66,8 +68,8 @@ module.exports = {
     */
     allowDots: false
   },
-  uploads: {
 
+  uploads: {
     /*
     |--------------------------------------------------------------------------
     | Multiple
@@ -86,7 +88,7 @@ module.exports = {
     | This option will enable checksums for uploaded files. Following are
     | the support options.
     |
-    | md5, sha1
+    | false, md5, sha1
     |
     */
     hash: false,
@@ -96,10 +98,10 @@ module.exports = {
     | Max Upload Size
     |--------------------------------------------------------------------------
     |
-    | Max file upload size for all files. Example - 2 files of 1mb will reach
-    | the maximum limit.
+    | Max file upload size for all files.
     |
     */
-    maxSize: '2mb'
+    maxSize: '100mb'
   }
+
 }
