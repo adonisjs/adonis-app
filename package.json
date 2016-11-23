@@ -19,7 +19,7 @@
     "adonis-framework": "^3.0.6",
     "adonis-lucid": "^3.0.10",
     "adonis-middleware": "^1.0.9",
-    "standard": "^8.4.0",
+    "standard": "^8.6.0",
     "youch": "^1.0.1"
   },
   "standard": {
