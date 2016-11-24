@@ -29,13 +29,13 @@ Http.handleError = function * (error, request, response) {
    * PRODUCTION REPORTER
    */
   const status = error.status || 500
+  const message = error.message || 'Something went wrong'
   console.error(error.stack)
-  yield response.status(status).sendView('errors/index', {error})
+  yield response.status(status).sendView('errors/index', { status, message })
 }
 
 /**
  * listener for Http.start event, emitted after
  * starting http server.
  */
-Http.onStart = function () {
-}
+Http.onStart = function() {}
