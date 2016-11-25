@@ -87,9 +87,11 @@ const aliases = {
 |
 */
 const commands = [
+  'App/Commands/Greet',
+  'Adonis/Commands/Repl',
+
   'Adonis/Commands/Auth:Setup',
   'Adonis/Commands/DB:Seed',
-  'App/Commands/Greet',
   'Adonis/Commands/Key:Generate',
   'Adonis/Commands/Make:Controller',
   'Adonis/Commands/Make:Command',
@@ -105,7 +107,6 @@ const commands = [
   'Adonis/Commands/Migration:Refresh',
   'Adonis/Commands/Migration:Reset',
   'Adonis/Commands/Migration:Status',
-  'Adonis/Commands/Repl',
   'Adonis/Commands/Route:List'
 ]
 
