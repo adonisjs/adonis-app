@@ -26,7 +26,7 @@ module.exports = {
   | Cookie name is required even if you are not using cookie driver.
   |
   */
-  cookie: 'adonis-session',
+  cookie: Env.get('SESSION_COOKIE','adonis-session'),
 
   /*
   |--------------------------------------------------------------------------
