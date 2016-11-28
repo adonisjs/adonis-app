@@ -11,7 +11,7 @@ module.exports = {
   | Data Limit should be larger than 'Max Upload Size'
   |
   */
-  limit: '125mb',
+  limit: '20mb',
 
   /*
   |--------------------------------------------------------------------------
@@ -101,7 +101,7 @@ module.exports = {
     | Max file upload size for all files.
     |
     */
-    maxSize: '100mb'
+    maxSize: '15mb'
   }
 
 }
