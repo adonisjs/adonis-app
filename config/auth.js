@@ -13,7 +13,7 @@ module.exports = {
   | serializer to be used for retrieving users. Below is the default
   | authenticator to be used for every request.
   |
-  | Available Schemes - basic, session, jwt, api
+  | Available Schemes - session, basic, jwt, api
   | Available Serializers - Lucid, Database
   |
   */
@@ -67,7 +67,10 @@ module.exports = {
     scheme: 'jwt',
     uid: 'email',
     password: 'password',
-    secret: Config.get('app.appKey')
+    secret: Config.get('app.appKey'),
+    options: {
+      // Options to be used while generating token
+    }
   },
 
   /*
@@ -85,7 +88,8 @@ module.exports = {
   api: {
     serializer: 'Lucid',
     model: 'App/Model/Token',
-    scheme: 'api'
+    scheme: 'api',
+    expiry: '30d'
   }
 
 }
