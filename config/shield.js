@@ -16,7 +16,13 @@ module.exports = {
   | }
   */
   csp: {
-    directives: {},
+    directives: {
+      defaultSrc: ['self'],
+      scriptSrc: ['self'],
+      connectSrc: ['self'],
+      imgSrc: ['self'],
+      styleSrc: ['self']
+    },
     reportOnly: false,
     setAllHeaders: false,
     disableAndroid: true
