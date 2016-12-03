@@ -12,6 +12,7 @@
 */
 const providers = [
   'adonis-framework/providers/ConfigProvider',
+  'adonis-framework/providers/EncryptionProvider',
   'adonis-framework/providers/EnvProvider',
   'adonis-framework/providers/EventProvider',
   'adonis-framework/providers/HelpersProvider',
@@ -65,6 +66,7 @@ const aliases = {
   Command: 'Adonis/Src/Command',
   Config: 'Adonis/Src/Config',
   Database: 'Adonis/Src/Database',
+  Encryption: 'Adonis/Src/Encryption',
   Env: 'Adonis/Src/Env',
   Event: 'Adonis/Src/Event',
   Factory: 'Adonis/Src/Factory',
