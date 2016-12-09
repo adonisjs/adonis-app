@@ -27,6 +27,28 @@ module.exports = {
   */
   cookie: 'adonis-session',
 
+  
+  /*
+  |--------------------------------------------------------------------------
+  | Redis options
+  |--------------------------------------------------------------------------
+  |
+  | When using redis driver, configure the connection options here.
+  | see https://github.com/adonisjs/adonis-redis for more configuration options.
+  | Clustering is not supported for sessions.
+  |
+  | You can also supply a redis connection string like so:
+  | redis: Env.get('REDIS_URL', 'redis://localhost:6379')
+  */
+  redis: {
+    port: 6379,          // Redis port
+    host: '127.0.0.1',   // Redis host
+    family: 4,           // 4 (IPv4) or 6 (IPv6)
+    password: 'auth',
+    db: 0
+  },
+
+  
   /*
   |--------------------------------------------------------------------------
   | Session Age
