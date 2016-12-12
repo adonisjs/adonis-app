@@ -70,6 +70,18 @@ module.exports = function (callback) {
 
       /*
       |--------------------------------------------------------------------------
+      | Load Websocket Channels And Middleware
+      |--------------------------------------------------------------------------
+      |
+      | Websocket channels defination should be loaded before firing the Http
+      | server.
+      |
+      */
+      use(Helpers.makeNameSpace('Ws', 'kernel'))
+      use(Helpers.makeNameSpace('Ws', 'socket'))
+
+      /*
+      |--------------------------------------------------------------------------
       | Load Database Factory
       |--------------------------------------------------------------------------
       |
