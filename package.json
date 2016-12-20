@@ -17,9 +17,9 @@
     "adonis-commands": "^2.1.3",
     "adonis-fold": "^3.0.3",
     "adonis-framework": "^3.0.7",
-    "adonis-lucid": "^3.0.11",
+    "adonis-lucid": "^3.0.12",
     "adonis-middleware": "^1.0.10",
-    "adonis-websocket": "^1.0.1",
+    "adonis-websocket": "^1.0.2",
     "standard": "^8.6.0",
     "youch": "^1.0.1"
   },
