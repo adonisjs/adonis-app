@@ -20,7 +20,7 @@ Http.handleError = function * (error, request, response) {
       new Ouch.handlers.PrettyPageHandler('blue', null, 'sublime')
     )
     ouch.handleException(error, request.request, response.response, (output) => {
-      console.error(error.stack)
+      console.error(error.message)
     })
     return
   }
@@ -29,7 +29,7 @@ Http.handleError = function * (error, request, response) {
    * PRODUCTION REPORTER
    */
   const status = error.status || 500
-  console.error(error.stack)
+  console.error(error.message)
   yield response.status(status).sendView('errors/index', {error})
 }
 
