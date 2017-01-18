@@ -3,8 +3,10 @@
   "version": "3.2.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
-    "start": "node server.js",
+    "start": "echo \"\\033[31mWARN: 'start' will be depreciated soon. Instead use 'npm run serve'\" && npm run serve",
+    "dev": "echo \"\\033[31mWARN: 'dev' will be depreciated soon. Instead use 'npm run serve:dev'\" && npm run serve:dev",
+    "serve:dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
+    "serve": "node server.js",
     "lint": "standard"
   },
   "author": "",
