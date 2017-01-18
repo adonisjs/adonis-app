@@ -12,6 +12,7 @@
 */
 const providers = [
   'adonis-framework/providers/ConfigProvider',
+  'adonis-framework/providers/EncryptionProvider',
   'adonis-framework/providers/EnvProvider',
   'adonis-framework/providers/EventProvider',
   'adonis-framework/providers/HelpersProvider',
@@ -66,6 +67,7 @@ const aliases = {
   Command: 'Adonis/Src/Command',
   Config: 'Adonis/Src/Config',
   Database: 'Adonis/Src/Database',
+  Encryption: 'Adonis/Src/Encryption',
   Env: 'Adonis/Src/Env',
   Event: 'Adonis/Src/Event',
   Factory: 'Adonis/Src/Factory',
@@ -90,25 +92,26 @@ const aliases = {
 */
 const commands = [
   'App/Commands/Greet',
-  'Adonis/Commands/Auth:Setup',
   'Adonis/Commands/Repl',
+
+  'Adonis/Commands/Auth:Setup',
+  'Adonis/Commands/DB:Seed',
+  'Adonis/Commands/Key:Generate',
   'Adonis/Commands/Make:Controller',
-  'Adonis/Commands/Route:List',
-  'Adonis/Commands/Make:Migration',
-  'Adonis/Commands/Make:Model',
-  'Adonis/Commands/Make:View',
   'Adonis/Commands/Make:Command',
   'Adonis/Commands/Make:Hook',
-  'Adonis/Commands/Make:Middleware',
-  'Adonis/Commands/Make:Seed',
   'Adonis/Commands/Make:Listener',
+  'Adonis/Commands/Make:Migration',
+  'Adonis/Commands/Make:Middleware',
+  'Adonis/Commands/Make:Model',
+  'Adonis/Commands/Make:Seed',
+  'Adonis/Commands/Make:View',
   'Adonis/Commands/Migration:Run',
   'Adonis/Commands/Migration:Rollback',
   'Adonis/Commands/Migration:Refresh',
   'Adonis/Commands/Migration:Reset',
-  'Adonis/Commands/DB:Seed',
   'Adonis/Commands/Migration:Status',
-  'Adonis/Commands/Key:Generate'
+  'Adonis/Commands/Route:List'
 ]
 
 module.exports = { providers, aceProviders, aliases, commands }

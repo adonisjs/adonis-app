@@ -18,13 +18,14 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | Sqlite
+  | Drivers
   |--------------------------------------------------------------------------
   |
-  | Sqlite is a flat file database and can be good choice under development
-  | environment.
+  | Here we configure the db various driver connection settings
   |
-  | npm i --save sqlite3
+  | check http://adonisjs.com/docs/3.1/database-setup for the available drivers
+  | and use (npm install --save :driverName)
+  | where ':drivername' is (mysql, sqlite, etc...)
   |
   */
   sqlite: {
@@ -35,43 +36,64 @@ module.exports = {
     useNullAsDefault: true
   },
 
-  /*
-  |--------------------------------------------------------------------------
-  | MySQL
-  |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for MySQL database.
-  |
-  | npm i --save mysql
-  |
-  */
   mysql: {
     client: 'mysql',
     connection: {
       host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', 3306),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
+      database: Env.get('DB_DATABASE', 'adonis'),
+      debug: false
     }
   },
 
-  /*
-  |--------------------------------------------------------------------------
-  | PostgreSQL
-  |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for PostgreSQL database.
-  |
-  | npm i --save pg
-  |
-  */
+  maria: {
+    client: 'mariasql',
+    connection: {
+      host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', 3306),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis'),
+      debug: false
+    }
+  },
+
+  mssql: {
+    client: 'mssql',
+    connection: {
+      host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', 3306),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis'),
+      debug: false
+    }
+  },
+
   pg: {
     client: 'pg',
     connection: {
       host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', 5432),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
+      database: Env.get('DB_DATABASE', 'adonis'),
+      debug: false,
+      ssl: false
+    }
+  },
+
+  oracle: {
+    client: 'oracle',
+    connection: {
+      host: Env.get('DB_HOST', 'localhost'),
+      port: 1521,
+      user: Env.get('DB_USER', ''),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis'),
+      debug: false
     }
   }
 

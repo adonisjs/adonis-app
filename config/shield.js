@@ -1,6 +1,7 @@
 'use strict'
 
 module.exports = {
+
   /*
   |--------------------------------------------------------------------------
   | Content Security Policy
@@ -16,6 +17,11 @@ module.exports = {
   */
   csp: {
     directives: {
+      defaultSrc: ['self'],
+      scriptSrc: ['self'],
+      connectSrc: ['self'],
+      imgSrc: ['self'],
+      styleSrc: ['self']
     },
     reportOnly: false,
     setAllHeaders: false,
@@ -28,12 +34,12 @@ module.exports = {
   |--------------------------------------------------------------------------
   |
   | X-XSS Protection saves from applications from XSS attacks. It is adopted
-  | by IE and later followed by some other browsers.
+  | by IE8+ and followed by some other browsers.
   |
   */
   xss: {
     enabled: true,
-    enableOnOldIE: false
+    enableOnOldIE: true
   },
 
   /*
@@ -82,7 +88,7 @@ module.exports = {
   */
   csrf: {
     enable: true,
-    methods: ['POST', 'PUT', 'DELETE'],
+    methods: ['POST', 'PUT', 'DELETE', 'PATCH'],
     filterUris: [],
     compareHostAndOrigin: true
   }
