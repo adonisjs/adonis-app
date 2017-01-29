@@ -1,6 +1,6 @@
 {
   "name": "adonis-app",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "main": "server.js",
   "scripts": {
     "start": "echo \"\\033[31mWARN: 'start' will be depreciated soon. Instead use 'npm run serve'\" && npm run serve",
