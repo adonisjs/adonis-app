@@ -35,6 +35,9 @@ module.exports = {
   | Define session life in minutes. Session will be destroyed after defined
   | minutes of inactivity.
   |
+  | Note: If you are using Redis to store sessions you should define
+  | session life in seconds.
+  |
   */
   age: 120,
 
