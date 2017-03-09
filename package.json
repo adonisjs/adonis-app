@@ -22,7 +22,6 @@
     "adonis-lucid": "^3.0.14",
     "adonis-middleware": "^1.0.11",
     "adonis-websocket": "^1.0.3",
-    "standard": "^8.6.0",
     "youch": "^2.0.4"
   },
   "standard": {
