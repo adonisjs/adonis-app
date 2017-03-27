@@ -15,7 +15,7 @@
   "private": true,
   "dependencies": {
     "adonis-ace": "^3.0.7",
-    "adonis-auth": "^1.0.5",
+    "adonis-auth": "^1.0.7",
     "adonis-commands": "^2.1.5",
     "adonis-fold": "^3.0.3",
     "adonis-framework": "^3.0.10",
