@@ -25,6 +25,6 @@ Factory.blueprint('App/Model/User', (fake) => {
   return {
     username: fake.username(),
     email: fake.email(),
-    password: fake.password()
+    password: '$2a$10$rZdHPJLfrnSQ6/S8GgzteefKzihwvbGhuWl7HWaQeKu2FeQ6CMejS'
   }
 })
