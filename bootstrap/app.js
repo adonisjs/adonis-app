@@ -92,8 +92,8 @@ const commands = [
   'App/Commands/Greet',
   'Adonis/Commands/Auth:Setup',
   'Adonis/Commands/Repl',
-  'Adonis/Commands/Make:Controller',
   'Adonis/Commands/Route:List',
+  'Adonis/Commands/Make:Controller',
   'Adonis/Commands/Make:Migration',
   'Adonis/Commands/Make:Model',
   'Adonis/Commands/Make:View',
@@ -106,8 +106,8 @@ const commands = [
   'Adonis/Commands/Migration:Rollback',
   'Adonis/Commands/Migration:Refresh',
   'Adonis/Commands/Migration:Reset',
-  'Adonis/Commands/DB:Seed',
   'Adonis/Commands/Migration:Status',
+  'Adonis/Commands/DB:Seed',
   'Adonis/Commands/Key:Generate'
 ]
 
