@@ -37,10 +37,10 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | Mysql
+  | MySQL
   |--------------------------------------------------------------------------
   |
-  | Here we define connection settings for Mysql database.
+  | Here we define connection settings for MySQL database.
   |
   | npm i --save mysql
   |
@@ -49,6 +49,7 @@ module.exports = {
     client: 'mysql',
     connection: {
       host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', ''),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis')
@@ -60,7 +61,7 @@ module.exports = {
   | PostgreSQL
   |--------------------------------------------------------------------------
   |
-  | Here we define connection settings for Mysql database.
+  | Here we define connection settings for PostgreSQL database.
   |
   | npm i --save pg
   |
@@ -69,6 +70,7 @@ module.exports = {
     client: 'pg',
     connection: {
       host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', ''),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis')

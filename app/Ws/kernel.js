@@ -1,21 +1,17 @@
 'use strict'
 
-const Middleware = use('Middleware')
+const Ws = use('Ws')
 
 /*
 |--------------------------------------------------------------------------
 | Global Middleware
 |--------------------------------------------------------------------------
 |
-| Global middleware are executed on every request and must be defined
-| inside below array.
+| Global middleware are executed on every websocket request handshake and
+| must be defined inside below array.
 |
 */
 const globalMiddleware = [
-  'Adonis/Middleware/Cors',
-  'Adonis/Middleware/BodyParser',
-  'Adonis/Middleware/Shield',
-  'Adonis/Middleware/Flash',
   'Adonis/Middleware/AuthInit'
 ]
 
@@ -24,8 +20,8 @@ const globalMiddleware = [
 | Named Middleware
 |--------------------------------------------------------------------------
 |
-| Named middleware are key/value pairs. Keys are later used on routes
-| which binds middleware to specific routes.
+| Named middleware are key/value pairs. Keys are later used on websocket
+| channels.
 |
 */
 const namedMiddleware = {
@@ -40,5 +36,5 @@ const namedMiddleware = {
 | Here we finally register our defined middleware to Middleware provider.
 |
 */
-Middleware.global(globalMiddleware)
-Middleware.named(namedMiddleware)
+Ws.global(globalMiddleware)
+Ws.named(namedMiddleware)

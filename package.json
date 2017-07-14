@@ -1,29 +1,40 @@
 {
   "name": "adonis-app",
-  "version": "3.0.0",
-  "main": "index.js",
+  "version": "3.2.1",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x 'node --harmony_proxies' server.js",
-    "start": "node --harmony_proxies server.js"
+    "start": "echo \"\\033[31mWARN: 'start' will be depreciated soon. Instead use 'npm run serve'\" && npm run serve",
+    "dev": "echo \"\\033[31mWARN: 'dev' will be depreciated soon. Instead use 'npm run serve:dev'\" && npm run serve:dev",
+    "serve:dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
+    "serve": "node server.js",
+    "lint": "standard"
   },
   "author": "",
   "license": "MIT",
   "description": "",
   "private": true,
   "dependencies": {
-    "adonis-ace": "git+https://github.com/adonisjs/ace.git#develop",
-    "adonis-auth": "git+https://github.com/adonisjs/adonis-auth.git#develop",
-    "adonis-commands": "git+https://github.com/adonisjs/adonis-commands.git#develop",
-    "adonis-fold": "^3.0.1",
-    "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
-    "adonis-lucid": "git+https://github.com/adonisjs/adonis-lucid.git#feature-version-3",
-    "adonis-middleware": "git+https://github.com/adonisjs/adonis-middleware.git#develop",
-    "youch": "^1.0.0"
+    "adonis-ace": "^3.0.7",
+    "adonis-auth": "^1.0.5",
+    "adonis-commands": "^2.1.5",
+    "adonis-fold": "^3.0.3",
+    "adonis-framework": "^3.0.10",
+    "adonis-lucid": "^3.0.14",
+    "adonis-middleware": "^1.0.11",
+    "adonis-websocket": "^1.0.3",
+    "youch": "^2.0.4"
+  },
+  "standard": {
+    "global": [
+      "use",
+      "make"
+    ]
   },
   "autoload": {
     "App": "./app"
   },
   "devDependencies": {
-    "nodemon": "^1.9.1"
+    "nodemon": "^1.11.0",
+    "standard": "^10.0.1"
   }
 }

@@ -1,6 +1,0 @@
-{% extends 'master' %}
-
-{% block content %}
-  <img src="/assets/logo.svg">
-  <h2>Practical. Reliable. Productive</h2>
-{% endblock %}

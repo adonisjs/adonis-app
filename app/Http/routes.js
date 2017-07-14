@@ -5,9 +5,9 @@
 | Router
 |--------------------------------------------------------------------------
 |
-| Router helps you in defining urls and their corresponding actions. Adonis
-| Router is an upto date implementation of HTTP specs and handle common
-| conventions gracefully.
+| AdonisJs Router helps you in defining urls and their actions. It supports
+| all major HTTP conventions to keep your routes file descriptive and
+| clean.
 |
 | @example
 | Route.get('/user', 'UserController.index')

@@ -70,6 +70,29 @@ module.exports = function (callback) {
 
       /*
       |--------------------------------------------------------------------------
+      | Load Websocket Channels And Middleware
+      |--------------------------------------------------------------------------
+      |
+      | Websocket channels defination should be loaded before firing the Http
+      | server.
+      |
+      */
+      use(Helpers.makeNameSpace('Ws', 'kernel'))
+      use(Helpers.makeNameSpace('Ws', 'socket'))
+
+      /*
+      |--------------------------------------------------------------------------
+      | Load Database Factory
+      |--------------------------------------------------------------------------
+      |
+      | All database/model blueprints are defined inside the below file. We
+      | autoload it to be used inside the entire application.
+      |
+      */
+      use(Helpers.databasePath('factory'))
+
+      /*
+      |--------------------------------------------------------------------------
       | Start Http Server
       |--------------------------------------------------------------------------
       |
@@ -82,5 +105,5 @@ module.exports = function (callback) {
         callback()
       }
     })
-    .catch(console.error)
+    .catch((error) => console.error(error.stack))
 }

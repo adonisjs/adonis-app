@@ -44,7 +44,7 @@ module.exports = {
   | Basic Authentication works on Http Basic auth header.
   |
   */
-  basicAuth: {
+  basic: {
     serializer: 'Lucid',
     model: 'App/Model/User',
     scheme: 'basic',
@@ -65,6 +65,8 @@ module.exports = {
     serializer: 'Lucid',
     model: 'App/Model/User',
     scheme: 'jwt',
+    uid: 'email',
+    password: 'password',
     secret: Config.get('app.appKey')
   },
 

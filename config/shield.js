@@ -55,10 +55,10 @@ module.exports = {
   |
   | Browsers have a habit of sniffing content-type of a response. Which means
   | files with .txt extension containing Javascript code will be executed as
-  | Javascript. You can disable this behavior by setting nosniff to true.
+  | Javascript. You can disable this behavior by setting nosniff to false.
   |
   */
-  nosniff: false,
+  nosniff: true,
 
   /*
   |--------------------------------------------------------------------------
@@ -83,7 +83,8 @@ module.exports = {
   csrf: {
     enable: true,
     methods: ['POST', 'PUT', 'DELETE'],
-    filterUris: []
+    filterUris: [],
+    compareHostAndOrigin: true
   }
 
 }

@@ -26,8 +26,10 @@ const providers = [
   'adonis-framework/providers/ViewProvider',
   'adonis-lucid/providers/DatabaseProvider',
   'adonis-lucid/providers/LucidProvider',
+  'adonis-lucid/providers/FactoryProvider',
   'adonis-middleware/providers/AppMiddlewareProvider',
-  'adonis-auth/providers/AuthManagerProvider'
+  'adonis-auth/providers/AuthManagerProvider',
+  'adonis-websocket/providers/WsProvider'
 ]
 
 /*
@@ -41,12 +43,12 @@ const providers = [
 */
 const aceProviders = [
   'adonis-lucid/providers/CommandsProvider',
-  'adonis-lucid/providers/FactoryProvider',
   'adonis-lucid/providers/MigrationsProvider',
   'adonis-lucid/providers/SchemaProvider',
   'adonis-lucid/providers/SeederProvider',
   'adonis-ace/providers/CommandProvider',
   'adonis-commands/providers/GeneratorsProvider',
+  'adonis-commands/providers/HelperCommandsProvider',
   'adonis-commands/providers/ReplProvider'
 ]
 
@@ -61,18 +63,20 @@ const aceProviders = [
 |
 */
 const aliases = {
-  Env: 'Adonis/Src/Env',
-  Middleware: 'Adonis/Src/Middleware',
-  Hash: 'Adonis/Src/Hash',
-  Event: 'Adonis/Src/Event',
+  Command: 'Adonis/Src/Command',
   Config: 'Adonis/Src/Config',
-  Route: 'Adonis/Src/Route',
-  Helpers: 'Adonis/Src/Helpers',
   Database: 'Adonis/Src/Database',
+  Env: 'Adonis/Src/Env',
+  Event: 'Adonis/Src/Event',
   Factory: 'Adonis/Src/Factory',
-  Schema: 'Adonis/Src/Schema',
+  Hash: 'Adonis/Src/Hash',
+  Helpers: 'Adonis/Src/Helpers',
   Lucid: 'Adonis/Src/Lucid',
-  Command: 'Adonis/Src/Command'
+  Middleware: 'Adonis/Src/Middleware',
+  Route: 'Adonis/Src/Route',
+  Schema: 'Adonis/Src/Schema',
+  View: 'Adonis/Src/View',
+  Ws: 'Adonis/Addons/Ws'
 }
 
 /*
@@ -88,6 +92,7 @@ const commands = [
   'App/Commands/Greet',
   'Adonis/Commands/Auth:Setup',
   'Adonis/Commands/Repl',
+  'Adonis/Commands/Route:List',
   'Adonis/Commands/Make:Controller',
   'Adonis/Commands/Make:Migration',
   'Adonis/Commands/Make:Model',
@@ -101,8 +106,8 @@ const commands = [
   'Adonis/Commands/Migration:Rollback',
   'Adonis/Commands/Migration:Refresh',
   'Adonis/Commands/Migration:Reset',
-  'Adonis/Commands/DB:Seed',
   'Adonis/Commands/Migration:Status',
+  'Adonis/Commands/DB:Seed',
   'Adonis/Commands/Key:Generate'
 ]
 
