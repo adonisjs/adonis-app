@@ -113,7 +113,7 @@ module.exports = {
     | Service Injection
     |--------------------------------------------------------------------------
     |
-    | Inside your nunjucks views, you can inject models, services etc using
+    | Inside your Edge views, you can inject models, services etc using
     | IoC container. Setting it to false will disable this feature.
     |
     */
