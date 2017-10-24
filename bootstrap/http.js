@@ -70,6 +70,28 @@ module.exports = function (callback) {
 
       /*
       |--------------------------------------------------------------------------
+      | Load Http Server And create httpInstance
+      |--------------------------------------------------------------------------
+      |
+      | If you are need server on https, you need replace code on this
+      | 
+      | @see https://nodejs.org/api/https.html#https_https_createserver_options_requestlistener 
+      | @example:
+      |
+      | const fs = require('fs')
+      | const require('https')
+      | const options = {
+      |  key: fs.readFileSync(Env.get('HTTPS_SERVER_KEY')),
+      |  cert: fs.readFileSync(Env.get('HTTPS_SERVER_CERT')),
+      | };
+      | const Server = use('Adonis/Src/Server')
+      | Server.httpInstance = https.createServer(options, Server.handle.bind(Server)) 
+      |
+      */
+      const Server = use('Adonis/Src/Server')
+
+      /*
+      |--------------------------------------------------------------------------
       | Load Websocket Channels And Middleware
       |--------------------------------------------------------------------------
       |
@@ -99,7 +121,6 @@ module.exports = function (callback) {
       | We are all set to fire the Http Server and start receiving new requests.
       |
       */
-      const Server = use('Adonis/Src/Server')
       Server.listen(Env.get('HOST'), Env.get('PORT'))
       if (typeof (callback) === 'function') {
         callback()
