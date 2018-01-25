@@ -53,7 +53,7 @@ module.exports = {
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis'),
-      charset: Env.get('DB_CHARSET', 'utf8')
+      charset: Env.get('DB_CHARSET', 'utf8mb4')
     }
   },
 
