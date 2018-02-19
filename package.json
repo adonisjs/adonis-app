@@ -35,6 +35,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
-    "standard": "^10.0.1"
+    "standard": "^11.0.0"
   }
 }
