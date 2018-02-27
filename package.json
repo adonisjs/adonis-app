@@ -34,7 +34,7 @@
     "App": "./app"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
+    "nodemon": "^1.16.0",
     "standard": "^11.0.0"
   }
 }
