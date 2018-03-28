@@ -23,7 +23,7 @@ He was so excited and full of energy to build this application and share it with
 
 ## Not Anymore
 
-This is so frustating. Node.js is a beautiful language but all of the above questions have never been answered together. We all love writing small concise modules but business are not created by downloading 20 modules.
+This is so frustrating. Node.js is a beautiful language but all of the above questions have never been answered together. We all love writing small concise modules but business are not created by downloading 20 modules.
 
 Developers needs productive tools, so that they can focus on what matters, and not on downloading & finding the best ways to combine these small modules. 
 
